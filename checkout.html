@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: rgb(223, 222, 222);
+    }
+
+    #grid {
+      display: grid;
+      gap: 1%;
+      grid-template: 'top1 top2'
+        'top1 right'
+        'left1 right'
+        'left2 right'
+        'left3 right';
+
+    }
+
+    /* div>div{
+           border: 1px solid red;
+       } */
+    #grid>div:nth-child(1) {
+      grid-area: top1;
+      /* height: 450px; */
+      width: 700px;
+      background-color: white;
+      margin-bottom: 10px;
+    }
+
+    #grid>div:nth-child(2) {
+      grid-area: left1;
+      /* height: 800px; */
+      width: 700px;
+      background-color: white;
+
+    }
+
+    #grid>div:nth-child(3) {
+      grid-area: left2;
+      height: 200px;
+      width: 700px;
+      background-color: white;
+    }
+
+    #payment_page {
+      grid-area: left3;
+      height: 100%;
+      width: 700px;
+      background-color: white;
+    }
+
+    #grid>div:nth-child(5) {
+      grid-area: top2;
+      height: 240px;
+      width: 400px;
+      background-color: white;
+    }
+
+    #grid>div:nth-child(6) {
+      grid-area: right;
+      height: 230px;
+      width: 400px;
+      background-color: white;
+    }
+
+    #image {
+      float: left;
+    }
+
+    #name {
+      float: left;
+    }
+
+    #qty {
+      float: left;
+      margin-left: 200px;
+    }
+
+    #price {
+      float: left;
+      margin-left: 200px;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    .rs {
+      float: left;
+      margin-left: 400px;
+    }
+
+    .total {
+      float: left;
+    }
+
+    .input_btn {
+      width: 650px;
+      height: 30px;
+      margin: 10px;
+    }
+
+    select {
+      width: 655px;
+      height: 30px;
+      margin: 10px;
+    }
+
+    #btn {
+      width: 400px;
+      height: 40px;
+      margin-left: 150px;
+      font-size: 30px;
+      background-color: purple;
+      color: white;
+
+    }
+
+    #text {
+      width: 300px;
+      height: 30px;
+      margin-left: 40px;
+      font-size: 20px;
+
+    }
+
+    #apply {
+      font-size: 20px;
+      color: black;
+      text-align: center;
+    }
+
+    .adjust_anker {
+      margin-left: 300px;
+    }
+
+    .payment {
+      font-size: 20px;
+      display: flex;
+      /* margin-top: 10px; */
+    }
+
+    #payment_btn {
+      margin-left: 100px;
+      width: 500px;
+      height: 40px;
+      margin-top: 40px;
+      background-color: purple;
+      color: white;
+      font-size: 20px;
+    }
+
+    #promo {
+      width: 370px;
+      font-size: 15px;
+
+    }
+
+    #promo {
+      width: 200px;
+      height: 40px;
+      margin-left: 100px;
+      margin-top: 10px;
+      background-color: purple;
+      font-size: 20px;
+      color: white;
+    }
+
+    .random_text {
+      text-align: center;
+    }
+
+    .round_btn {
+      /* width: 5px; */
+      height: 15px;
+      border-radius: 5px;
+
+    }
+
+    .pay_input {
+      width: 500px;
+      height: 30px;
+      margin-bottom: 10px;
+      margin-left: 40px;
+    }
+
+    .pay_input_mmyy {
+      width: 250px;
+      height: 30px;
+      margin-left: 40px;
+    }
+
+    .pay_input_code {
+      width: 240px;
+      height: 30px;
+    }
+
+    .form-popup {
+      display: none
+    }
+
+    #visa {
+      float: left;
+    }
+
+    #products>div {
+      border: 1px solid rgb(63, 63, 60);
+      border-radius: 5px;
+      display: grid;
+      width: 100%;
+      margin-top: 5px;
+    }
+
+    #products>div>p {
+      color: black;
+      margin-left: 10px;
+      font-size: 15px;
+      line-height: 0.03em;
+    }
+
+    img {
+      width: 13%;
+    }
+
+    #f_right>span {
+      color: brown;
+    }
+
+    #header-cont {
+      font-family: Lato, sans-serif;
+      height: 100%;
+      width: 100%;
+    }
+
+    #top-cont {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      background: url("https://a.cdnsbn.com/images/common/2016headerbg.jpg?v=2") top center no-repeat;
+    }
+
+    #strawberry-cont {
+      float: left;
+      width: 18%;
+      padding: 20px 20px 20px 20px;
+      padding-left: 50px;
+      margin-left: 16%;
+    }
+
+    #logo_img {
+      width: 80%;
+      /* height: 80%; */
+    }
+
+    #search-cont {
+      text-align: center;
+      width: 40%;
+    }
+
+    #search-cont>input {
+      border: 2px solid purple;
+      width: 50%;
+      height: 30%;
+      margin-top: 25px;
+      border-radius: 12px;
+    }
+
+    #search-cont>button {
+      border: 2px solid purple;
+      height: 36%;
+      border-radius: 12px;
+      color: #623381;
+    }
+
+    #right-cont {
+      display: flex;
+      flex-direction: row-reverse;
+      width: 15%;
+    }
+
+    #right-cont>a {
+      margin-right: 40px;
+      margin-top: 8%;
+      color: #b53788;
+      font-size: 12px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    #right-cont svg {
+      padding: 4px;
+    }
+
+    .special-item .cut {
+      text-decoration: line-through;
+    }
+
+    .menu-cont {
+      background-color: #623381;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .button>a {
+      color: white;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      font-size: 12px;
+      font-weight: bold;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+    }
+
+    .btn-hover>a:hover {
+      background-color: white;
+      color: #623381;
+      text-decoration: underline;
+    }
+
+    #shp {
+      width: 90%;
+      margin-left: 12%;
+      font-family: Lato, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- .........................header cont start........................... -->
+  <div id="header-cont">
+    <div id="top-cont">
+      <div id="strawberry-cont">
+        <a href="home1.html"><img src="https://a.cdnsbn.com/images/common/2016CompanyLogo.png" id="logo_img" /></a>
+      </div>
+      <div id="search-cont">
+        <input type="text" placeholder="SEARCH BRAND/PRODUCTS" /><button>
+          Search
+        </button>
+      </div>
+      <div id="right-cont">
+        <a href="cart.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-fill"
+            viewBox="0 0 18 18">
+            <path
+              d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z" />
+          </svg>Bag</a>
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart-fill"
+            viewBox="0 0 18 18">
+            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+          </svg>Wishlist</a>
+        <a href="#" id="myBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle"
+            viewBox="0 0 18 18">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path fill-rule="evenodd"
+              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+          </svg>Login</a>
+      </div>
+    </div>
+    <!-- ...........................header cont ends.............................. -->
+    <!-- ...........................menu cont starts............................ -->
+    <div class="menu-cont">
+      <div class="button btn-hover">
+        <a href="shopByBrands.html" title="SHOP BY BRAND">SHOP BY BRAND</a>
+        <a href="#" title="SKINCARE">SKINCARE</a>
+        <a href="makeUp.html" title="MAKEUP">MAKEUP</a>
+        <a href="#" title="HAIRCARE">HAIRCARE</a>
+        <a href="#" title="PERFUME">PERFUME</a>
+        <a href="#" title="MEN'S SKINCARE">MEN'S SKINCARE</a>
+        <a href="#" title="MEN'S COLOGNE">MEN'S COLOGNE</a>
+        <a href="#" title="HOME SCENTS">HOME SCENTS</a>
+        <a href="#" title="NATURAL BEAUTY">NATURAL BEAUTY</a>
+        <a href="#" title="SPECIAL">SPECIAL</a>
+        <a href="#" title="★NEW">★NEW</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="shp">
+    <h1 style="letter-spacing: 0.3em; margin-top: 50px;">CHECKOUT</h1>
+    <div id="grid">
+      <div>
+        <ul>
+          <h3>Notification</h3>
+          <li>Due to current situation, a 3.5% freight surcharge will be applied to your order</li>
+          <li>Please note that delivery to your selected region will be delayed because order dispatches are on hold due
+            to shipping restrictions. For more information, please contact info@strawberrynet.com.</li>
+          <li>Due to recent flight scheduling changes, orders may experience delivery delays.</li>
+          <li>This order may be subject to duties and taxes, which are payable by the customer and are not refundable.
+          </li>
+        </ul>
+        <hr />
+
+
+
+        <div id="data">
+          <div id="products"></div>
+
+
+
+          <div class="clear"></div>
+          <hr />
+          <h1 style="margin-left: 10px;" class="total">Item total
+            <span id="total_price1" style="color: brown;margin-left: 350px;"></span>
+          </h1>
+
+        </div>
+      </div>
+
+
+      <!-- child2 -->
+      <div>
+        <h1 style="margin-left: 10px;">Shiping information</h1>
+        <h2 style="margin-left: 10px;">Shiping Address</h2>
+        <input type="text" id="first_name" placeholder="First Name*" class="input_btn" />
+        <input type="text" id="last_name" placeholder="Last Name*" class="input_btn" />
+        <input type="text" id="company" placeholder="Company" class="input_btn" />
+
+        <select>
+          <option value="india">India</option>
+          <option value="Nepal">Nepal</option>
+          <option value="Usa">Usa</option>
+          <option value="Canada">Canada</option>
+        </select>
+
+
+        <input type="text" name="" id="address" placeholder="Address" class="input_btn" />
+        <input type="text" class="input_btn" />
+        <input type="text" class="input_btn" />
+        <input type="text" id="city" placeholder="City/Town" class="input_btn" />
+        <input type="text" name="" id="state" placeholder="State/Province" class="input_btn" />
+        <input type="text" name="" id="zip" placeholder="Zip/Postal code" class="input_btn" />
+        <input type="text" name="" id="mobile" placeholder="Mobile" class="input_btn" />
+        <button id="btn"><b>Save & Continue</b></button>
+
+      </div>
+
+
+
+      <div>
+        <h3 style="margin-left: 10px;">DELIVERY OPTIONS & GIFT MESSAGE</h3>
+
+        <h4 style="margin-left: 10px;">DELIVERY OPTIONS</h4>
+
+        <p>
+          INR384.20 - Standard Shipping (Signature)
+          <a class="adjust_anker" href="">
+            <input type="radio" id="visa" />
+          </a>
+        </p>
+
+        <hr />
+        <h3 style="margin-left: 10px;">ADD GIFT MESSAGE(OPTIONAL)<a class="adjust_anker" href="">
+          </a></h3>
+
+      </div>
+
+
+      <div id="payment_page">
+
+        <h2 style="margin-left: 10px;">PAYMENT</h2>
+
+        <p style="margin-left: 10px;" class="payment">
+
+          <button type="radio" class="round_btn" onclick="openForm()"></button>
+          <img src="https://s.cdnsbn.com/images/common/Visa.png" />
+          Visa - credit or debit card
+        <div class="form-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
+            <input id="card_number" type="number" placeholder="Card Number(without space)" class="pay_input"
+              required><br />
+            <input id="card_expiry" type="text" placeholder="MM/YY" class="pay_input_mmyy" required>
+            <input id="card_cvc" type="text" name="" placeholder="Security Code" class="pay_input_code">
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+        </p>
+
+
+        <p style="margin-left: 10px;" class="payment">
+
+          <button type="radio" class="round_btn" onclick="openForm()"></button>
+          <img src="https://s.cdnsbn.com/images/common/Master.png" />
+          MasterCard - credit or debit card
+        <div class="form-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
+            <input type="number" placeholder="Card Number(without space)" class="pay_input" required><br />
+            <input type="text" placeholder="MM/YY" class="pay_input_mmyy" required>
+            <input type="text" name="" id="" placeholder="Security Code" class="pay_input_code">
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+        </p>
+
+
+        <p style="margin-left: 10px;" class="payment">
+
+          <button type="radio" class="round_btn" onclick="openForm()"></button>
+          <img src="https://s.cdnsbn.com/images/common/Paypal.png" />
+          Paypal
+        <div class="form-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
+            <input type="number" placeholder="Card Number(without space)" class="pay_input" required><br />
+            <input type="text" placeholder="MM/YY" class="pay_input_mmyy" required>
+            <input type="text" name="" id="" placeholder="Security Code" class="pay_input_code">
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+        </p>
+
+        <p style="margin-left: 10px;" class="payment">
+
+          <button type="radio" class="round_btn" onclick="openForm()"></button>
+          <img src="https://s.cdnsbn.com/images/common/AmericanExpress.png" />
+          American Express
+        <div class="form-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
+            <input type="number" placeholder="Card Number(without space)" class="pay_input" required><br />
+            <input type="text" placeholder="MM/YY" class="pay_input_mmyy" required>
+            <input type="text" name="" id="" placeholder="Security Code" class="pay_input_code">
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+        </p>
+
+        <p style="margin-left: 10px;" class="payment">
+
+          <button type="radio" class="round_btn" onclick="openForm()"></button>
+          <img src="https://s.cdnsbn.com/images/common/DinersClub.png" />
+          Diners
+        <div class="form-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
+            <input type="number" placeholder="Card Number(without space)" class="pay_input" required><br />
+            <input type="text" placeholder="MM/YY" class="pay_input_mmyy" required>
+            <input type="text" name="" id="" placeholder="Security Code" class="pay_input_code">
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+        </p>
+
+
+        <p style="margin-left: 10px;" class="payment">
+
+          <button type="radio" class="round_btn" onclick="openForm()"></button>
+          <img src="https://s.cdnsbn.com/images/common/JCB.png" />
+          JCB
+        <div class="form-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
+            <input type="number" placeholder="Card Number(without space)" class="pay_input" required><br />
+            <input type="text" placeholder="MM/YY" class="pay_input_mmyy" required>
+            <input type="text" name="" id="" placeholder="Security Code" class="pay_input_code">
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+        </p>
+
+
+        <p style="margin-left: 10px;" class="payment">
+          <button type="radio" class="round_btn" onclick="openForm()"></button>
+          <img src="https://s.cdnsbn.com/images/common/union_pay.png" />
+          CHINA UNION PAY
+        <div class="form-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
+            <input type="number" placeholder="Card Number(without space)" class="pay_input" required><br />
+            <input type="text" placeholder="MM/YY" class="pay_Bioelementsinput_mmyy" required>
+            <input type="text" name="" id="" placeholder="Security Code" class="pay_input_code">
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+        </p>
+
+        <button id="payment_btn">Pay Now</button>
+        <p class="random_text">Registry of Company: Strawberry Fields, No. 4 A Kung Ngam Village Road, Shau Kei Wan,
+          Hong Kong</p>
+
+        <!-- stop -->
+
+
+
+
+
+
+        <!-- stop -->
+
+      </div>
+
+
+
+
+
+      <div>
+        <h3 style="margin-left: 20px;"><b>ENTER PROMO CODE</b></h3>
+        <input type="text" id="text" placeholder="Enter Promo code" />
+        <P id="apply"></P>
+        <button id="promo">APPLY</button>
+      </div>
+
+      <div id="f_right">
+        <h2 style="margin-left: 10px;">Payment Detail</h2>
+        <p style="margin-left: 10px;">Item total
+          <span id="itemTotal" style="float: right; margin-right: 10px;"></span>
+        </p>
+        <p style="margin-left: 10px;">Standard Shipping (Signature)
+          <span style="float: right; margin-right: 10px;">0</span>
+        </p>
+        <p style="margin-left: 10px;">Freight Surcharge
+          <span style="float: right; margin-right: 10px;">0</span>
+        </p>
+        <hr />
+        <h3 style="margin-left: 10px;">Order Total
+          <span id="final_amount" style="float: right; margin-right: 10px;"></span>
+        </h3>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<script>
+
+  let cart_data = JSON.parse(localStorage.getItem("items"));
+
+  let products_div = document.getElementById("products");
+
+  var total = 0;
+
+  cart_data.forEach(function (p) {
+    let div = document.createElement("div");
+
+    let p_name = document.createElement("p");
+    p_name.innerHTML = p.name;
+
+    let p_description = document.createElement("p");
+    p_description.innerHTML = p.description;
+
+    let p_price = document.createElement("p");
+    p_price.innerHTML = p.price;
+
+    let p_image = document.createElement("img");
+    p_image.src = p.image;
+
+
+
+    div.append(p_image, p_name, p_description, p_price);
+
+    products_div.append(div);
+
+    // console.log(typeof p.price);
+    // var rate = +p.price;
+    // console.log(typeof rate);
+  });
+  var total_price = JSON.parse(localStorage.getItem("total_price"));
+
+  var total_price1 = document.getElementById("total_price1");
+  total_price1.innerHTML = "Rs. " + total_price;
+
+  var btn_promo = document.getElementById("promo");
+  btn_promo.addEventListener("click", applycode);
+
+  applycode();
+
+  function applycode() {
+    var total_amount = total_price;
+
+    var afterpromo = Math.floor(total_amount - (total_amount * 3) / 100);
+
+    let promoInput = document.getElementById("text").value;
+
+    checker(total_amount, afterpromo, promoInput);
+
+    function checker(total_amount, afterpromo, promoInput) {
+      if (promoInput == "masai30") {
+        document.getElementById("itemTotal").innerText = afterpromo;
+        document.getElementById("apply").innerText = "Congratulation!"
+        document.getElementById("final_amount").innerText = afterpromo
+
+      }
+      else {
+        document.getElementById("itemTotal").innerText = total_amount;
+        document.getElementById("final_amount").innerText = total_amount
+
+      }
+    }
+  }
+
+
+  var pay_btn = document.getElementById("payment_btn")
+  pay_btn.addEventListener("click", pay)
+
+  function pay() {
+    var cardNo = document.getElementById("card_number").value;
+    var cardE = document.getElementById("card_expiry").value;
+    var cvc = document.getElementById("card_cvc").value;
+    if (cardNo.length == 16 && cardE.length == 4 && cvc.length == 3) {
+      //  console.log("yes")
+      alert("payment Successful");
+      setTimeout(function () {
+
+        window.location.href = "thanks.html";
+      }, 1000);
+    } else {
+      alert("your card is details wrong")
+    }
+  }
+
+
+
+
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+
+
+</script>
