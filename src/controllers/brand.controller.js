@@ -16,7 +16,9 @@ router.post("", async (req, res) => {
 router.get("", async (req, res) => {
     const brand = await Brand.find().lean().exec();
 
-    return res.status(200).send({brand});
+    return res.render('products/shopByBrand.ejs', {
+        brands: brand
+    })
 })
 
 module.exports = router

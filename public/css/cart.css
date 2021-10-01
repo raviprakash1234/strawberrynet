@@ -1,0 +1,134 @@
+body {
+    background-color: rgb(245, 240, 240);
+    margin-bottom: 200px;
+}
+#shp {
+  width: 90%;
+  margin: auto;
+  font-family: Lato, sans-serif;
+}
+h1 {
+  margin-top: 5%;
+  margin-bottom: 3%;
+  letter-spacing: 0.3em;
+}
+#grid {
+  display: grid;
+  gap: 3%;
+  grid-template:
+    "top right"
+    "left right"
+    "bottom right";
+}
+#grid>div:nth-child(1) {
+  grid-area: top;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 85%;
+  background-color: white;
+}
+
+#grid>div:nth-child(1) a {
+  text-decoration: none;
+  color: black;
+}
+#grid>div:nth-child(2) {
+  grid-area: left;
+  width: 85%;
+  background-color: white;
+}
+#grid>div:nth-child(3) {
+  grid-area: bottom;
+  width: 85%;
+  height: 80%;
+  background-color: #e7e7e7;
+  overflow-y: scroll;
+  color: #4f4f4f;
+}
+#grid>div:nth-child(4) {
+  grid-area: right;
+  height: 150px;
+  width: 80%;
+  background-color: white;
+  text-align: center;
+}
+#shipingbar {
+  width: 600px;
+  height: 8px;
+  background-color: #e5e5e5;
+  border-radius: 5px;
+}
+#shipingbar>div {
+    width: 40%;
+    height: 8px;
+    background-color: #d497f0;
+    border-radius: 5px;
+}
+#data {
+  display: inline;
+}
+#name {
+  display: inline;
+}
+#price {
+  display: inline;
+  margin-left: 250px;
+}
+#qty {
+  display: inline;
+  margin-left: 200px;
+}
+h4 {
+  color: black;
+}
+
+#anker {
+  border: 1px solid black;
+  font-size: 16px;
+  background-color: #623380;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+.ck {
+  padding: 20px;
+  margin-right: 40px;
+}
+.close {
+  margin-top: 0px;
+  float: right;
+}
+#products>div {
+  border: 1px solid rgb(63, 63, 60);
+  border-radius: 5px;
+  display: grid;
+  width: 100%;
+  margin-top: 5px;
+}
+#products>div>p {
+  color: black;
+  margin-left: 10px;
+  font-size: 15px;
+  line-height: 0.03em;
+}
+#products img {
+  width: 13%;
+}
+
+#total {
+  float: right;
+  margin-right: 10px;
+}
+#signature {
+  float: right;
+  margin-right: 10px;
+}
+#surcharge {
+  float: right;
+  margin-right: 10px;
+}
+#order_total {
+  float: right;
+  margin-right: 10px;
+}

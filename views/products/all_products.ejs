@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/itemsCont.css">
+    <link rel="stylesheet" href="css/header.style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/itemsCont.style.css">
+    <link rel="stylesheet" href="css/footer.style.css">
+</head>
+</head>
+
+<body>
+    <!-- .........................header cont start........................... -->
+    <div id="header-cont">
+        <div id="top-cont">
+            <div id="strawberry-cont">
+                <a href="home1.html"><img src="https://a.cdnsbn.com/images/common/2016CompanyLogo.png" /></a>
+            </div>
+            <div id="search-cont">
+                <input type="text" placeholder="SEARCH BRAND/PRODUCTS" /><button>
+                    Search
+                </button>
+            </div>
+            <div id="right-cont">
+                <a href="cart.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-bag-fill" viewBox="0 0 18 18">
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z" />
+                    </svg>Bag</a>
+                <a href="wishlist.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-heart-fill" viewBox="0 0 18 18">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>Wishlist</a>
+                <a href="#" id="myBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-person-circle" viewBox="0 0 18 18">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg>Login</a>
+            </div>
+        </div>
+        <!-- ...........................header cont ends............................ -->
+        <!-- ...........................menu cont starts............................ -->
+        <div class="menu-cont">
+            <div class="button btn-hover">
+                <a href="shopByBrand.ejs" title="SHOP BY BRAND">SHOP BY BRAND</a>
+                <a href="#" title="SKINCARE">SKINCARE</a>
+                <a href="makeUp.html" title="MAKEUP">MAKEUP</a>
+                <a href="#" title="HAIRCARE">HAIRCARE</a>
+                <a href="#" title="PERFUME">PERFUME</a>
+                <a href="#" title="MEN'S SKINCARE">MEN'S SKINCARE</a>
+                <a href="#" title="MEN'S COLOGNE">MEN'S COLOGNE</a>
+                <a href="#" title="HOME SCENTS">HOME SCENTS</a>
+                <a href="#" title="NATURAL BEAUTY">NATURAL BEAUTY</a>
+                <a href="#" title="SPECIAL">SPECIAL</a>
+                <a href="#" title="★NEW">★NEW</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- .......................menu cont ends........................... -->
+    <!-- .....................SignUp/Login......................... -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="register">
+                <div class="rectangle">
+                    <div class="button">
+                        <button id="sign" onclick="signIn()">Sign In</button>
+                        <button id="new" onclick="signUp()">New Here?</button>
+                    </div>
+                    <hr />
+                    <div class="input">
+                        <input type="text" placeholder="FirstName" id="take_first" /><br />
+                        <input type="text" placeholder="LastName" id="take_last" /><br />
+                        <input type="text" placeholder="Email address" id="take_email" /><br />
+                        <input type="password" placeholder="Password" id="take_password" /><br />
+                        <p>
+                            Please enter a minimum of 8 characters,including at least 1
+                            letter and 1 number
+                        </p>
+                        <input type="password" placeholder="Re-enter your Password" id="take_password1" />
+                        <p>
+                            By creating your account,you agree to our privacy & Terms &
+                            conditions
+                        </p>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkbox1" name="checkbox" value="checkbox" />
+                        <label for="checkbox1">Subscribe to our exclusive email offers</label>
+                    </div>
+                    <div class="submit">
+                        <button id="save_value">REGISTER</button>
+                    </div>
+                </div>
+            </div>
+            <div id="login" style="display: none">
+                <div class="rectangle">
+                    <div class="button">
+                        <div class="button">
+                            <button id="sign" onclick="signIn()">Sign In</button>
+                            <button id="new" onclick="signUp()">New Here?</button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="input">
+                        <input type="text" placeholder="Email address" id="email" /><br />
+                        <input type="text" placeholder="Password" id="pwd" /><br />
+                    </div>
+                    <div class="forget">
+                        <a href="#">Forget Password</a>
+                    </div>
+                    <div class="submit">
+                        <button id="logIn">SIGN IN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ........................slide cont starts......................... -->
+    <div id="slide-cont">
+        <div id="slider">
+            <div id="slides">
+                <input type="radio" name="radio-btn" id="radio1" />
+                <input type="radio" name="radio-btn" id="radio2" />
+                <input type="radio" name="radio-btn" id="radio3" />
+                <input type="radio" name="radio-btn" id="radio4" />
+                <input type="radio" name="radio-btn" id="radio5" />
+                <input type="radio" name="radio-btn" id="radio6" />
+                <input type="radio" name="radio-btn" id="radio7" />
+                <input type="radio" name="radio-btn" id="radio8" />
+                <input type="radio" name="radio-btn" id="radio9" />
+                <input type="radio" name="radio-btn" id="radio10" />
+                <input type="radio" name="radio-btn" id="radio11" />
+                <input type="radio" name="radio-btn" id="radio12" />
+                <input type="radio" name="radio-btn" id="radio13" />
+
+                <div class="slide first">
+                    <img src="https://a.cdnsbn.com/images/English/banner_SaleFiesta8offAug21_1170_1.jpg" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_SkincareSensitiveSkinAug21_1170_1.jpg?v=3" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_MenSkincareAug21_1170_1.jpg?v=3" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_Aug21SpecialPurchase_1170_1.jpg" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_HalfPriceSkincareAug21_1170_1.jpg?v=3" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_MakeupAllComplexionAug21_1170_1.jpg?v=3" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_Aug21top40_1170_1.jpg" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_Aug21NewLines_1170_1.jpg" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_VeganBeautyNov20_1170_1.jpg" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_AshiyaMay21_1170_1.jpg" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_MedicalMask28Sep20_1140_1.jpg" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_BrandTacticalDemonFeb20_1140_1.jpg" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_RewardProgramBP_1140_1.jpg" />
+                </div>
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                    <div class="auto-btn5"></div>
+                    <div class="auto-btn6"></div>
+                    <div class="auto-btn7"></div>
+                    <div class="auto-btn8"></div>
+                    <div class="auto-btn9"></div>
+                    <div class="auto-btn10"></div>
+                    <div class="auto-btn11"></div>
+                    <div class="auto-btn12"></div>
+                    <div class="auto-btn13"></div>
+                </div>
+            </div>
+            <div id="navigation-man">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+                <label for="radio6" class="manual-btn"></label>
+                <label for="radio7" class="manual-btn"></label>
+                <label for="radio8" class="manual-btn"></label>
+                <label for="radio9" class="manual-btn"></label>
+                <label for="radio10" class="manual-btn"></label>
+                <label for="radio11" class="manual-btn"></label>
+                <label for="radio12" class="manual-btn"></label>
+                <label for="radio13" class="manual-btn"></label>
+            </div>
+        </div>
+    </div>
+
+    <!-- .............................Ant-Aging......................... -->
+    <div class="dailySpecial">
+        <div class="special-title">
+            <div class="line"></div>
+            <div>
+                <h2>ANTI-AGING SKINCARE SPECIALS</h2>
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="special-item">
+            <% antiAging.forEach(function (product) { %>
+                <div>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#623381"
+                            class="bi bi-heart" viewBox="0 0 16 16">
+                            <path
+                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                        </svg>
+                    </a>
+                    <a href="p2.html">
+                        <img src=<%=product.product_image%> alt="item-image">
+                    </a>
+                    <div class="s_item_data">
+                        <h4>
+                            <%= product.brand.brand_name %>
+                        </h4>
+                        <p>
+                            <%= product.product_name %>
+                        </p>
+                    </div>
+                    <div class="price-cont">
+                        <p class="special-offer">SAVE 60%</p>
+                        <h2> RS. <%= product.price - (60*product.price)/100 %>
+                        </h2>
+                        <!-- <p>RRP Rs.7,607.50</p> -->
+                    </div>
+                    <div class="s_btn">
+                        <button>Add to bag</button>
+                        <h5>Extra 10% Off</h5>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+    <!-- ......................Anti-Aging Ends.......................... -->
+
+    <!-- ........................Daily Special.......................... -->
+    <div class="dailySpecial">
+        <div class="special-title">
+            <div class="line"></div>
+            <div>
+                <h2>DAILY SPECIALS</h2>
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="special-item">
+            <% dailySpecial.forEach(function (product) { %>
+                <div>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#623381"
+                            class="bi bi-heart" viewBox="0 0 16 16">
+                            <path
+                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                        </svg>
+                    </a>
+                    <a href="p2.html">
+                        <img src=<%=product.product_image%> alt="item-image">
+                    </a>
+                    <div class="s_item_data">
+                        <h4>
+                            <%= product.brand.brand_name %>
+                        </h4>
+                        <p>
+                            <%= product.product_name %>
+                        </p>
+                    </div>
+                    <div class="price-cont">
+                        <p class="special-offer">SAVE 60%</p>
+                        <h2> RS. <%= product.price %>
+                        </h2>
+                        <!-- <p>RRP Rs.7,607.50</p> -->
+                    </div>
+                    <div class="s_btn">
+                        <button>Add to bag</button>
+                        <h5>Extra 10% Off</h5>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+    <!-- ........................Daily Special Ends..................... -->
+
+    <!-- ......................best deals cont start.................... -->
+    <div class="best-deals">
+        <div class="special-title">
+            <div class="line"></div>
+            <div>
+                <h2>BEST DEALS</h2>
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="special-item">
+            <% bestDeal.forEach(function (product){ %>
+                <div>
+                    <div class="s_body">
+                        <div>
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#623381"
+                                    class="bi bi-heart" viewBox="0 0 16 16">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                                </svg>
+                            </a>
+                            <img src=<%=product.product_image%> alt="item-image" />
+                            <div class="s_item_data" id="new">
+                                <h4>
+                                    <%= product.brand.brand_name %>
+                                </h4>
+                                <p>
+                                    <%= product.product_name %>
+                                </p>
+                            </div>
+                            <div class="price-cont">
+                                <h2>Rs. <%= product.price %>
+                                </h2>
+                            </div>
+                            <div class="s_btn">
+                                <button>Add to bag</button>
+                                <h5>Extra 8% Off</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+    <!-- ............................best deals cont ends........................ -->
+</body>
+
+</html>
+
+<script type="text/javascript" src="js/slider.js"></script>
