@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/itemsCont.style.css">
     <link rel="stylesheet" href="css/footer.style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 </head>
 
@@ -22,9 +23,9 @@
                 <a href="home1.html"><img src="https://a.cdnsbn.com/images/common/2016CompanyLogo.png" /></a>
             </div>
             <div id="search-cont">
-                <input type="text" placeholder="SEARCH BRAND/PRODUCTS" /><button>
-                    Search
-                </button>
+                <input type="text" placeholder="SEARCH BRAND/PRODUCTS" />
+                <!-- <button>Search</button> -->
+                <button type="submit"><i class="fa fa-search"></i></button>
             </div>
             <div id="right-cont">
                 <a href="cart.html">
@@ -248,10 +249,18 @@
                         </p>
                     </div>
                     <div class="price-cont">
-                        <p class="special-offer">SAVE 35%</p>
-                        <h2> RS. <%= product.price - (60*product.price)/100 %>
+                        <!-- <p class="special-offer">SAVE 60%</p> -->
+                        <p class="special-offer">SAVE <% let a=Math.floor(Math.random()*40) %>
+                                <%=a%>%</p>
+
+                        <h2> RS. <%= product.price - (a*product.price)/100 %>
                         </h2>
                         <!-- <p>RRP Rs.7,607.50</p> -->
+                        <p>RRP Rs. <del>
+                                <%= product.price%>
+                            </del></p>
+
+
                     </div>
                     <div class="s_btn">
                         <button>Add to bag</button>
@@ -294,10 +303,17 @@
                         </p>
                     </div>
                     <div class="price-cont">
-                        <p class="special-offer">SAVE 60%</p>
-                        <h2> RS. <%= product.price %>
+                        <p class="special-offer">SAVE <% let a=Math.floor(Math.random()*40) %>
+                                <%=a%>%</p>
+                        <!-- <h2> RS. <%= product.price %> </h2> -->
+                        <h2> RS. <%= product.price - (a*product.price)/100 %>
                         </h2>
                         <!-- <p>RRP Rs.7,607.50</p> -->
+                        <p>RRP Rs. <del>
+                                <%= product.price%>
+                            </del></p>
+
+
                     </div>
                     <div class="s_btn">
                         <button>Add to bag</button>

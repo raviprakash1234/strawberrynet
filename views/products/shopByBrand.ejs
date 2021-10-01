@@ -89,16 +89,34 @@
 
         <div class="t-data">
 
-            <table>
+            <!-- <table> -->
                 <!-- <tr>
                     <th>A</th>
                 </tr> -->
-                <% brands.forEach(function (brand){ %>
-                <tr>
+                <!-- <% brands.forEach(function (brand){ %>
+                <tr id="tr">
                     <td><a href="#"><%= brand.brand_name %></a></td>
                 </tr>
-                <% }) %>
-            </table>
+                <% }) %> -->
+            <!-- </table> -->
+            
+            
+            <div>
+                <%for(let i = 65; i <= 90; i++){%>
+                    <div >
+                       <h1 style=" color:#858ac7"> <%=String.fromCharCode(i)%></h1>
+                       <div style="display:grid; grid-template-columns:  25% 25% 25% 25% 25%; line-height: 40px;">
+                   <% brands.forEach(function (brand){ 
+                        if(brand.brand_name[0]==String.fromCharCode(i)){
+                    %>
+                    
+                    <a href="#"><%=brand.brand_name %>(<%=Math.floor(Math.random() * 30)%>)</a>
+                    <%  }})%>
+                </div>
+                </div>
+                <%}%>
+            </div>
+           
         </div>
     </div>
 </html>
