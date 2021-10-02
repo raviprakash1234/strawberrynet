@@ -1,0 +1,56 @@
+.main-cont {
+    width: 95%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.banner {
+    height: 10%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    /* width: 100%; */
+}
+.banner > img{
+    margin-left: 280px;
+}
+
+.b-cat>button {
+    padding: 5px;
+    color: #623381;
+    border: 1px solid #623381;
+    border-radius: 5px;
+    margin-top: 0.5%;
+    margin-right: 2%;
+    margin-bottom: 0.5%;
+    letter-spacing: 0.05em;
+}
+
+.line {
+    height: 5px;
+    background-color: #623381;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.t-data {
+    margin-left: 10%;
+    margin-right: 10%;
+    letter-spacing: 0.05em;
+}
+
+.t-data td {
+    width: 200px;
+    height: 20px;
+    color: #623381;
+}
+
+.t-data th {
+    color: #623381;
+    text-align: left;
+    font-size: 35px;
+}
+
+.t-data a {
+    color: #623381;
+    text-decoration: none;
+}

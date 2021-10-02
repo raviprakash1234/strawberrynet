@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Brands, Skincare, Makeup & Perfume | Strawberrynet INEN</title>
+    <link rel="stylesheet" href="./css/header.style.css">
+    <link rel="stylesheet" href="./css/shopByBrand.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <!-- .........................header cont start........................... -->
+    <div id="header-cont" class="navbar">
+
+        <div id="top-cont">
+            <div id="strawberry-cont">
+                <a href="home1.html"><img src="https://a.cdnsbn.com/images/common/2016CompanyLogo.png" /></a>
+            </div>
+            <div id="search-cont">
+                <input type="text" placeholder="SEARCH BRAND/PRODUCTS" />
+                <!-- <button>Search</button> -->
+                <button type="submit"><i class="fa fa-search"></i></button>
+
+            </div>
+            <div id="right-cont">
+                <a href="cart.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-bag-fill" viewBox="0 0 18 18">
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z" />
+                    </svg>Bag</a>
+                <a href="wishlist.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-heart-fill" viewBox="0 0 18 18">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>Wishlist</a>
+                <a href="#" id="myBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-person-circle" viewBox="0 0 18 18">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg>Login</a>
+            </div>
+        </div>
+        <!-- ...........................header cont ends.............................. -->
+        <!-- ...........................menu cont starts............................ -->
+        <div class="menu-cont">
+            <div class="button btn-hover">
+                <a href="shopByBrands.html" title="SHOP BY BRAND">SHOP BY BRAND</a>
+                <a href="#" title="SKINCARE">SKINCARE</a>
+                <a href="makeUp.html" title="MAKEUP">MAKEUP</a>
+                <a href="#" title="HAIRCARE">HAIRCARE</a>
+                <a href="#" title="PERFUME">PERFUME</a>
+                <a href="#" title="MEN'S SKINCARE">MEN'S SKINCARE</a>
+                <a href="#" title="MEN'S COLOGNE">MEN'S COLOGNE</a>
+                <a href="#" title="HOME SCENTS">HOME SCENTS</a>
+                <a href="#" title="NATURAL BEAUTY">NATURAL BEAUTY</a>
+                <a href="#" title="SPECIAL">SPECIAL</a>
+                <a href="#" title="★NEW">★NEW</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- .......................menu cont ends........................... -->
+    <div class="main-cont">
+        <!-- .......................Discount banner start........................... -->
+        <div class="banner">
+            <img src="https://a.cdnsbn.com/images/English/detail_SaleFiesta8offAug21_1170_1.jpg" alt="banner-img">
+        </div>
+        <!-- .......................Discount banner ends........................... -->
+
+        <!-- ................Brands-button Cont start................. -->
+        <div class="brands">
+            <h1>ALL BRANDS</h1>
+            <div class="b-cat">
+                <button>ALL BRANDS</button>
+                <button>SKINCARE BRANDS</button>
+                <button>MAKEUP BRANDS</button>
+                <button>HAIRCARE BRANDS</button>
+                <button>WOMEN'S PERFUME BRANDS</button>
+                <button>MEN'S SKINCARE BRANDS</button>
+                <button>MEN'S COLOGNE BRANDS</button>
+                <button>HOME SCENTS BRANDS</button>
+            </div>
+        </div>
+        <!-- ................Brands-button Cont ends................. -->
+
+        <div class="line"></div>
+
+        <div class="t-data">
+
+            <!-- <table> -->
+                <!-- <tr>
+                    <th>A</th>
+                </tr> -->
+                <!-- <% brands.forEach(function (brand){ %>
+                <tr id="tr">
+                    <td><a href="#"><%= brand.brand_name %></a></td>
+                </tr>
+                <% }) %> -->
+            <!-- </table> -->
+            
+            
+            <div>
+                <%for(let i = 65; i <= 90; i++){%>
+                    <div >
+                       <h1 style=" color:#858ac7"> <%=String.fromCharCode(i)%></h1>
+                       <div style="display:grid; grid-template-columns:  25% 25% 25% 25% 25%; line-height: 40px;">
+                   <% brands.forEach(function (brand){ 
+                        if(brand.brand_name[0]==String.fromCharCode(i)){
+                    %>
+                    
+                    <a href="#"><%=brand.brand_name %>(<%=Math.floor(Math.random() * 30)%>)</a>
+                    <%  }})%>
+                </div>
+                </div>
+                <%}%>
+            </div>
+           
+        </div>
+    </div>
+</html>
