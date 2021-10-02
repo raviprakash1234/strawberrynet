@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Beauty Brands, Skincare, Makeup & Perfume | Strawberrynet INEN
+    </title>
+    <link rel="stylesheet" href="./css/header.style.css">
+    <link rel="stylesheet" href="./css/cart.css">
+</head>
+
+<body>
+    <!-- .........................header cont start........................... -->
+    <div id="header-cont">
+        <div id="top-cont">
+            <div id="strawberry-cont">
+                <a href="home1.html"><img src="https://a.cdnsbn.com/images/common/2016CompanyLogo.png"
+                        id="logo_img" /></a>
+            </div>
+            <div id="search-cont">
+                <input type="text" placeholder="SEARCH BRAND/PRODUCTS" /><button>
+                    Search
+                </button>
+            </div>
+            <div id="right-cont">
+                <a href="cart.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-bag-fill" viewBox="0 0 18 18">
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z" />
+                    </svg>Bag</a>
+                <a href="wishlist.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-heart-fill" viewBox="0 0 18 18">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>Wishlist</a>
+                <a href="#" id="myBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-person-circle" viewBox="0 0 18 18">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg>Login</a>
+            </div>
+        </div>
+        <!-- ...........................header cont ends.............................. -->
+        <!-- ...........................menu cont starts............................ -->
+        <div class="menu-cont">
+            <div class="button btn-hover">
+                <a href="shopByBrands.html" title="SHOP BY BRAND">SHOP BY BRAND</a>
+                <a href="#" title="SKINCARE">SKINCARE</a>
+                <a href="makeUp.html" title="MAKEUP">MAKEUP</a>
+                <a href="#" title="HAIRCARE">HAIRCARE</a>
+                <a href="#" title="PERFUME">PERFUME</a>
+                <a href="#" title="MEN'S SKINCARE">MEN'S SKINCARE</a>
+                <a href="#" title="MEN'S COLOGNE">MEN'S COLOGNE</a>
+                <a href="#" title="HOME SCENTS">HOME SCENTS</a>
+                <a href="#" title="NATURAL BEAUTY">NATURAL BEAUTY</a>
+                <a href="#" title="SPECIAL">SPECIAL</a>
+                <a href="#" title="★NEW">★NEW</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- .......................menu cont ends........................... -->
+    <div id="shp">
+        <h1>SHOPPING BAG</h1>
+
+        <div id="grid">
+            <div id="template">
+                <h3 style="margin-left: 3%">DELIVER TO: <a href="#">India</a></h3>
+            </div>
+            <div class="m">
+                <p style="margin-left: 3%">
+                    Spend INR4,433.70 more for a reduced standard shipping fee at
+                    INR384.20.​
+                </p>
+                <div style="margin-left: 3%" id="shipingbar">
+                    <div></div>
+                </div>
+                <p style="margin-left: 3%">
+                    INR768.40 delivery fee for order below INR7,684.00.​ Free standard
+                    shipping for order above INR11,526.00.
+                </p>
+                <p style="margin-left: 3%">Goods shipped from Strawberrynet</p>
+                <hr />
+                <div id="data">
+                    
+                    <div id="products">
+                        <p style="margin-left: 3%">
+                            Item Total: 1 item(s)‎:
+                            <span id="total"></span>
+                        </p>
+                        <p style="margin-left: 3%">
+                            Standard Shipping (Signature):
+                            <span id="signature"></span>
+                        </p>
+                        <p style="margin-left: 3%">
+                            Freight Surcharge
+                            <span id="surcharge"></span>
+                        </p>
+
+                        <hr />
+                        <h3 style="margin-left: 3%">
+                            Order Total:
+                            <span id="order_total"></span>
+                        </h3>
+                       <% cart.forEach(function (cart) { %>
+                            <div>
+                                <img src=<%= cart.product_img %>></img>
+                                <p><%= cart.product_name %></p>
+                                <p><%= cart.product_desc %></p>
+                                <p>Rs. <%= cart.product_price %></p>
+                            </div>
+                        <% }) %>
+                    </div>
+                    <hr />
+                </div>
+
+            </div>
+
+
+            <div id="notification">
+                <ul>
+                    <h4>NOTIFICATION</h4>
+                    <li>
+                        Due to recent flight scheduling changes, orders may experience
+                        delivery delays.
+                    </li>
+                    <li>
+                        Due to current situation, a 3.5% freight surcharge will be applied
+                        to your order
+                    </li>
+                    <li>
+                        Please note that delivery to your selected region will be delayed
+                        because order dispatches are on hold due to shipping restrictions.
+                        For more information, please contact info@strawberrynet.com.
+                    </li>
+                    <li>
+                        This order may be subject to duties and taxes, which are payable
+                        by the customer and are not refundable.
+                    </li>
+                </ul>
+            </div>
+            <div class="ck">
+                <h2>
+                    Checkout as
+                    <span id="username1"></span>
+                </h2>
+
+                <a id="anker" href="checkout.html">CHECKOUT</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- <script type="text/javascript" src="../strawberrynet/script/cart.js"> -->
+    <!-- // let cart_data = JSON.parse(localStorage.getItem("items"));
+
+    // let products_div = document.getElementById("products");
+
+    // var total = 0;
+
+    // cart_data.forEach(function (p) {
+    //     let div = document.createElement("div");
+
+    //     let p_name = document.createElement("p");
+    //     p_name.innerHTML = p.name;
+
+    //     let p_description = document.createElement("p");
+    //     p_description.innerHTML = p.description;
+
+    //     let p_price = document.createElement("p");
+    //     p_price.innerHTML = "Rs." + p.price;
+
+    //     let p_image = document.createElement("img");
+    //     p_image.src = p.image;
+
+    //     let remove_item = document.createElement("button");
+    //     remove_item.textContent = "Delete";
+    //     remove_item.onclick = function () {
+    //         deleteFromCart(p);
+    //     };
+
+        // div.append(p_image, p_name, p_description, p_price, remove_item);
+
+        // products_div.append(div);
+
+        // total = parseFloat(total) + parseFloat(p.price.replace(/,/g, ""));
+    //});
+    // let totalprice_json = JSON.stringify(total);
+    // localStorage.setItem("total_price", totalprice_json);
+
+    // function deleteFromCart(p) {
+    //     // console.log(p);
+
+    //     const cartData = JSON.parse(localStorage.getItem("items"));
+
+    //     const newData = deleteFn(cartData, p);
+
+    //     localStorage.setItem("items", JSON.stringify(newData));
+
+    //     window.location.reload();
+    // }
+    // function deleteFn(cartData, p) {
+    //     for (let i = 0; i < cartData.length; i++) {
+    //         // item to delete
+    //         const productName = p.name;
+
+    //         if (cartData[i].name == productName) {
+    //             cartData.splice(i, 1);
+    //         }
+    //     }
+
+    //     return cartData;
+    // }
+
+    // let total_p = document.getElementById("total");
+    // total_p.innerHTML = `Rs ${total}`;
+
+    // let standard_p = document.getElementById("signature");
+    // standard_p.innerHTML = `Rs ${0}`;
+
+    // let surcharge_p = document.getElementById("surcharge");
+    // surcharge_p.innerHTML = `Rs ${0}`;
+
+    // let order_total = document.getElementById("order_total");
+    // order_total.innerHTML = `Rs ${total + 0 + 0}`;
+
+    // let username_data = JSON.parse(localStorage.getItem("users"));
+    // console.log(username_data.take_first);
+
+    // let username1 = document.getElementById("username1");
+    // username1.innerHTML = username_data.take_first + "?"; -->
+<!-- </script> -->

@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strawberry</title>
+    <link rel="stylesheet" href="dailySpecialP2.css">
+    <link rel="stylesheet" href="footer.style.css">
+    <link rel="stylesheet" href="header.style.css">
+    <link rel="stylesheet" href="itemsCont.style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- .........................header cont start........................... -->
+    <div id="header-cont">
+        <div id="top-cont">
+            <div id="strawberry-cont">
+                <a href="/products"><img src="https://a.cdnsbn.com/images/common/2016CompanyLogo.png" /></a>
+            </div>
+            <div id="search-cont">
+                <input type="text" placeholder="SEARCH BRAND/PRODUCTS" /><button>
+                    Search
+                </button>
+            </div>
+            <div id="right-cont">
+                <a href="cart.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-bag-fill" viewBox="0 0 18 18">
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z" />
+                    </svg>Bag</a>
+                <a href="wishlist.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-heart-fill" viewBox="0 0 18 18">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>Wishlist</a>
+                <a href="#" id="myBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-person-circle" viewBox="0 0 18 18">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg>Login</a>
+            </div>
+        </div>
+        <!-- ...........................header cont ends............................ -->
+        <!-- ...........................menu cont starts............................ -->
+        <div class="menu-cont">
+            <div class="button btn-hover">
+                <a href="shopByBrands.html" title="SHOP BY BRAND">SHOP BY BRAND</a>
+                <a href="/products/category/6153f21828b27edf09332490" title="SKINCARE">SKINCARE</a>
+                <a href="/products/category/6153f22c28b27edf09332492" title="MAKEUP">MAKEUP</a>
+                <a href="/products/category/6153f23428b27edf09332494" title="HAIRCARE">HAIRCARE</a>
+                <a href="/products/category/6153f24228b27edf09332496" title="PERFUME">PERFUME</a>
+                <a href="/products/category/6153f25928b27edf09332498" title="MEN'S SKINCARE">MEN'S SKINCARE</a>
+                <a href="/products/category/6153f26c28b27edf0933249a" title="MEN'S COLOGNE">MEN'S COLOGNE</a>
+                <a href="/products/category/6153f28328b27edf0933249c" title="HOME SCENTS">HOME SCENTS</a>
+                <a href="/products/category/6153f29828b27edf0933249e" title="NATURAL BEAUTY">NATURAL BEAUTY</a>
+                <a href="/products/category/6153f2a828b27edf093324a0" title="SPECIAL">SPECIAL</a>
+                <a href="/products/category/6153f2b028b27edf093324a2" title="★NEW">★NEW</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- .......................menu cont ends........................... -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <div id="register">
+                <div class="rectangle">
+                    <div class="button">
+                        <button id="sign" onclick="signIn()">Sign In</button>
+                        <button id="new" onclick="signUp()">New Here?</button>
+                    </div>
+                    <hr />
+                    <div class="input">
+                        <input type="text" placeholder="FirstName" id="take_first" /><br />
+                        <input type="text" placeholder="LastName" id="take_last" /><br />
+                        <input type="text" placeholder="Email address" id="take_email" /><br />
+                        <input type="password" placeholder="Password" id="take_password" /><br />
+                        <p>
+                            Please enter a minimum of 8 characters,including at least 1
+                            letter and 1 number
+                        </p>
+                        <input type="password" placeholder="Re-enter your Password" id="take_password1" />
+                        <p>
+                            By creating your account,you agree to our privacy & Terms &
+                            conditions
+                        </p>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkbox1" name="checkbox" value="checkbox" />
+                        <label for="checkbox1">Subscribe to our exclusive email offers</label>
+                    </div>
+                    <div class="submit">
+                        <button id="save_value">REGISTER</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="login" style="display: none">
+                <div class="rectangle">
+                    <div class="button">
+                        <div class="button">
+                            <button id="sign" onclick="signIn()">Sign In</button>
+                            <button id="new" onclick="signUp()">New Here?</button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="input">
+                        <input type="text" placeholder="Email address" id="email" /><br />
+                        <input type="text" placeholder="Password" id="pwd" /><br />
+                    </div>
+                    <div class="forget">
+                        <a href="#">Forget Password</a>
+                    </div>
+                    <div class="submit">
+                        <button id="logIn">SIGN IN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ........................slide cont starts......................... -->
+    <div id="slide-cont">
+        <div id="slider">
+            <div id="slides">
+                <input type="radio" name="radio-btn" id="radio1" />
+                <input type="radio" name="radio-btn" id="radio2" />
+                <input type="radio" name="radio-btn" id="radio3" />
+                <input type="radio" name="radio-btn" id="radio4" />
+                <input type="radio" name="radio-btn" id="radio5" />
+                <input type="radio" name="radio-btn" id="radio6" />
+                <input type="radio" name="radio-btn" id="radio7" />
+                <input type="radio" name="radio-btn" id="radio8" />
+                <input type="radio" name="radio-btn" id="radio9" />
+                <input type="radio" name="radio-btn" id="radio10" />
+                <input type="radio" name="radio-btn" id="radio11" />
+                <input type="radio" name="radio-btn" id="radio12" />
+                <input type="radio" name="radio-btn" id="radio13" />
+
+                <div class="slide first">
+                    <img src="https://a.cdnsbn.com/images/English/banner_SaleFiesta8offAug21_1170_1.jpg" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_SkincareSensitiveSkinAug21_1170_1.jpg?v=3" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_MenSkincareAug21_1170_1.jpg?v=3" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_Aug21SpecialPurchase_1170_1.jpg" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_HalfPriceSkincareAug21_1170_1.jpg?v=3" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_MakeupAllComplexionAug21_1170_1.jpg?v=3" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_Aug21top40_1170_1.jpg" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_Aug21NewLines_1170_1.jpg" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_VeganBeautyNov20_1170_1.jpg" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_AshiyaMay21_1170_1.jpg" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_MedicalMask28Sep20_1140_1.jpg" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_BrandTacticalDemonFeb20_1140_1.jpg" />
+                </div>
+                <div class="slide">
+                    <img src="https://a.cdnsbn.com/images/English/banner_RewardProgramBP_1140_1.jpg" />
+                </div>
+
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                    <div class="auto-btn5"></div>
+                    <div class="auto-btn6"></div>
+                    <div class="auto-btn7"></div>
+                    <div class="auto-btn8"></div>
+                    <div class="auto-btn9"></div>
+                    <div class="auto-btn10"></div>
+                    <div class="auto-btn11"></div>
+                    <div class="auto-btn12"></div>
+                    <div class="auto-btn13"></div>
+                </div>
+            </div>
+
+            <div id="navigation-man">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+                <label for="radio6" class="manual-btn"></label>
+                <label for="radio7" class="manual-btn"></label>
+                <label for="radio8" class="manual-btn"></label>
+                <label for="radio9" class="manual-btn"></label>
+                <label for="radio10" class="manual-btn"></label>
+                <label for="radio11" class="manual-btn"></label>
+                <label for="radio12" class="manual-btn"></label>
+                <label for="radio13" class="manual-btn"></label>
+            </div>
+        </div>
+    </div>
+    <!-- ............................slide cont ends........................ -->
+
+    <!-- -------------------------ant-aging start--------------------------------------------- -->
+<div class="dailySpecial">
+    <div class="special-title">
+        <div class="line"></div>
+        <div>
+            <h2>ANTI-AGING SKINCARE SPECIALS</h2>
+        </div>
+        <div class="line"></div>
+    </div>
+    <div class="special-item">
+        <% antiAging.forEach(function (product) { %>
+            <div>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#623381" class="bi bi-heart"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                    </svg>
+                </a>
+                <a href="/products/<%= product._id %>"><img src=<%=product.product_image %> > </img></a>
+                <div class="s_item_data">
+                    <h4>
+                        <%= product.brand.brand_name %>
+                    </h4>
+                    <p>
+                        <%= product.product_name %>
+                    </p>
+                </div>
+                <div class="price-cont">
+                    <p class="special-offer">SAVE 35%</p>
+                    <h2> RS. <%= product.price - (60*product.price)/100 %>
+                    </h2>
+                    <!-- <p>RRP Rs.7,607.50</p> -->
+                </div>
+                <div class="s_btn">
+                    <button onclick="addToBag(<%= JSON.stringify(product) %>)">Add to bag</button>
+                    <h5>Extra 8% Off</h5>
+                </div>
+            </div>
+            <% }) %>
+    </div>
+</div>
+<!-- ---------------------------------ant aging ends--------------------------------- -->
+    <!-- ...........................daily cont start........................ -->
+    <div class="dailySpecial">
+        <div class="special-title">
+            <div class="line"></div>
+            <div>
+                <h2>DAILY SPECIALS</h2>
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="special-item">
+            <!-- data will be inserted from javascript-->
+            <!-- //---------------------------------------------------------------------------------------------------------- -->
+            <!-- <% products.forEach(function (products) { %>
+                            <div>
+                                <a href="/products/<%= products._id %>"><img src=<%= products.product_image %> > </img></a>
+                                <p style="font-size: large;"><b><%= products.product_name %></b></p>
+                                <div style="color: red;font-size: small">save 60%</div>
+                                <div style="font-size: x-large; font-weight: bolder;">Rs. <%= products.price %></div>
+                                <button style="background-color: aquamarine; padding: 10px;border-radius: 6px;border: none; margin-left: 80px; margin-top: 30px;" onclick="addCart(<%= JSON.stringify(products) %>)">Add to Bag</button>
+                                <p style="color: palevioletred;margin-left: 80px;"><b>Extra 10% off</b> </p>
+                                <a href="http://localhost:2345/products/<%= products._id %>">clickme</a>
+                            </div>
+            <% }) %> -->
+            <% dailySpecial.forEach(function (product) { %>
+                <div>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#623381" class="bi bi-heart"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                        </svg>
+                    </a>
+                    <a href="/products/<%= product._id %>"><img src=<%=product.product_image %> > </img></a>
+                    <div class="s_item_data">
+                        <h4>
+                            <%= product.brand.brand_name %>
+                        </h4>
+                        <p>
+                            <%= product.product_name %>
+                        </p>
+                    </div>
+                    <div class="price-cont">
+                        <p class="special-offer">SAVE 60%</p>
+                        <h2> RS. <%= product.price %>
+                        </h2>
+                        <!-- <p>RRP Rs.7,607.50</p> -->
+                    </div>
+                    <div class="s_btn">
+                        <button onclick="addToBag(<%= JSON.stringify(product) %>)">Add to bag</button>
+                        <h5>Extra 10% Off</h5>
+                    </div>
+                </div>
+                <% }) %>
+
+        </div>
+    </div>
+    <!-- ............................daily cont ends........................ -->
+    <!-- ......................best deals cont start.................... -->
+    <div class="best-deals">
+        <div class="special-title">
+            <div class="line"></div>
+            <div>
+                <h2>BEST DEALS</h2>
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="special-item">
+            <% bestDeal.forEach(function (product){ %>
+                <div>
+                    <div class="s_body">
+                        <div>
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#623381"
+                                    class="bi bi-heart" viewBox="0 0 16 16">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                                </svg>
+                            </a>
+                            <a href="/products/<%= product._id %>"><img src=<%=product.product_image %> > </img></a>
+                            <div class="s_item_data" id="new">
+                                <h4>
+                                    <%= product.brand.brand_name %>
+                                </h4>
+                                <p>
+                                    <%= product.product_name %>
+                                </p>
+                            </div>
+                            <div class="price-cont">
+                                <h2>Rs. <%= product.price %>
+                                </h2>
+                            </div>
+                            <div class="s_btn">
+                                <button onclick="addToBag(<%= JSON.stringify(product) %>)">Add to bag</button>
+                                <h5>Extra 8% Off</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+<!-- ............................best deals cont ends........................ -->
+
+    <!-- ............................footer start........................ -->
+    <div id="footer-box">
+        <div id="footer-one">
+            <div id="footer-one-one">
+                <div>
+                    <h1>STAY CONNECTED</h1>
+                </div>
+                <div>
+                    <form>
+                        <input type="text" id="lname" name="lname"
+                            placeholder="Enter your email for exclusive offers" />
+                        <input type="submit" onclick="SignupshowAlert()" value="SIGN UP" />
+                    </form>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-twitter" viewBox="0 0 16 16">
+                        <path
+                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                    </svg>
+                    <i class="fa fa-pinterest" style="font-size: 47px"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-youtube" viewBox="0 0 16 16">
+                        <path
+                            d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                    </svg>
+                </div>
+            </div>
+            <div id="footer-one-two">
+                <div>
+                    <h1>Over</h1>
+                    <h1>33,000</h1>
+                    <h1>product from</h1>
+                    <h1>800 brand</h1>
+                </div>
+            </div>
+            <div id="footer-one-three">
+                <div>
+                    <h1>FREE Shipping</h1>
+                    <h1>ANYWHERE</h1>
+                    <h1>in the world !</h1>
+                    <h1>Condition apply</h1>
+                </div>
+            </div>
+        </div>
+        <div id="footer-two">
+            <h1>SHIPPING & TAX</h1>
+            <h1>RETURNS POLICY</h1>
+            <h1>FAQ</h1>
+            <h1>CONTACT US</h1>
+            <h1>
+                <img src="file:///C:/Users/SWARAJ/Downloads/globe.png" />
+                CHANGE COUNTRY/CURRENCY
+            </h1>
+        </div>
+        <div id="footer-three">
+            <div>
+                <h1>PAY WITH:</h1>
+                <img src="https://a.cdnsbn.com/images/common/Visa_16.png" />
+                <img src="https://a.cdnsbn.com/images/common/Master_16.png" />
+                <img src="https://a.cdnsbn.com/images/common/Paypal_16.png" />
+                <img src="https://a.cdnsbn.com/images/common/JCB_16.png" />
+                <img src="https://a.cdnsbn.com/images/common/AmericanExpress_16.png" />
+                <img src="https://a.cdnsbn.com/images/common/Discover_16.png" />
+                <img src="https://a.cdnsbn.com/images/common/DiscoverMore.png" />
+            </div>
+            <div>
+                <h1>MY ACCOUNT</h1>
+                <h1>Track Order</h1>
+                <h1>Order History</h1>
+                <h1>My Reviews</h1>
+                <h1>Birthday Treat</h1>
+                <h1>Program</h1>
+            </div>
+            <div>
+                <h1>OUR COMPANY</h1>
+                <h1>About Us</h1>
+                <h1>Point Rewards Program</h1>
+                <h1>Contact Us</h1>
+                <h1>Affiliates</h1>
+                <h1>Partners</h1>
+            </div>
+            <div>
+                <h1>DOWNLOAD</h1>
+                <img src="https://seeklogo.com/images/D/download-on-the-app-store-logo-8CE1B96702-seeklogo.com.png" />
+                <img
+                    src="https://lh3.googleusercontent.com/1hJj6Aw2k6cEyFu10xdj5riLo0wBGFKE5XnbGaymhgo1z8Tsr8EpfJr2jbQFRxDONvwk6lak-62F2Fx7-_jp-ykJKA=w1000-e365" />
+            </div>
+            <div>
+                <h1>RATED EXCELLENT</h1>
+                <img src="https://medals.bizrate.com/medals/dynamic/27609_medal.gif" />
+                <img src="https://a.cdnsbn.com/images/common/HK-Trust-Mark_resize.png" />
+                <h1>9.0 out of 10!</h1>
+                <img src="https://a.cdnsbn.com/images/common/2021Premiumeshop.png" />
+                <img src="https://a.cdnsbn.com/images/common/2021TRUSTeshop.jpg" />
+            </div>
+        </div>
+        <div id="footer-four">
+            <div id="ff-one">
+                <h1>Excellent</h1>
+                <div id="green-box">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                </div>
+                <h1>Based on 24,554 reviews</h1>
+                <h1>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    Trustpiolt
+                </h1>
+            </div>
+            <div id="ff-two">
+                <div id="green-box-1">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                    <h1>12 hours ago</h1>
+                </div>
+                <h1>excellent service</h1>
+                <h1>Love strawberrynet Net. Easy to use</h1>
+                <h1>Warren Charlton</h1>
+                <h1>Showing our 5 star review</h1>
+            </div>
+            <div id="ff-three">
+                <div id="green-box-1">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                    <h1>12 hours ago</h1>
+                </div>
+                <h1>I love strawberrynet</h1>
+                <h1>I love strawberrynet</h1>
+                <h1>Robyn Ferguson</h1>
+                <h1>Showing our 5 star review</h1>
+            </div>
+            <div id="ff-four">
+                <div id="green-box-1">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </div>
+                    <h1>12 hours ago</h1>
+                </div>
+                <h1>Great prodcut range</h1>
+                <h1>Excellence price</h1>
+                <h1>Kerri kim</h1>
+                <h1>Showing our 5 star review</h1>
+            </div>
+            <div id="last-lines">
+                <div id="last-lines-box">
+                    <h1>
+                        Privacy & Security | Terms & Conditions | Point Rewards Program
+                        Terms & Conditions
+                    </h1>
+                    <h1>1998 - 2021 © StrawberryNET.com All Rights Reserved.</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script>
+        function SignupshowAlert() {
+            var myText = "Congrulation ! You got 30% off use code masai30";
+            alert(myText);
+        }
+        <img src="https://" />;
+    </script> -->
+    <!-- ............................footer end........................ -->
+</body>
+
+</html>
+
+<script>
+    function addCart(product) {
+        // app.post("/products", async (req, res) => {
+        //     const cart = await Cart.create(req.product._id)
+        //     console.log({cart})
+
+            
+        //     })
+        // })
+        console.log(product._id)
+    }
+
+    // var data = [
+    //     {
+    //         name: "Academie",
+    //         price: "3,035.50",
+    //         image: "https://a.cdnsbn.com/images/products/250/26113321339.jpg",
+    //         description: "Phyto-Peeling With Seaweed (Salon Size) 200ml/6.75oz",
+    //     },
+
+    //     {
+    //         name: "Bioelements",
+    //         price: "2,152.00",
+    //         image: "https://a.cdnsbn.com/images/products/250/16991730439.jpg",
+    //         description: "His Perfect Shave 118ml/4oz",
+    //     },
+
+    //     {
+    //         name: "Guerlain",
+    //         price: "5,148.50",
+    //         image: "https://a.cdnsbn.com/images/products/250/21914280737.jpg",
+    //         description: "La Patite Robe Noire Eau Fraiche Eau De Toilette Spray 100ml/3.3oz",
+    //     },
+
+    //     {
+    //         name: "Hermes",
+    //         price: "7,300.00",
+    //         image: "https://a.cdnsbn.com/images/products/250/15579440137.jpg",
+    //         description: "La Patite Robe Noire Eau Fraiche Eau De Toilette Spray 100ml/3.3oz",
+    //     }
+    // ];
+
+
+    // data.forEach((item) => {
+
+    //     const itemData = item;
+
+    //     const html = `<div>
+    //       <a onclick="wishlist('${item.name}', '${item.image}', '${item.price}', '${item.description}')"href="#">
+    //       <svg
+    //           xmlns="http://www.w3.org/2000/svg"
+    //           width="16"
+    //           height="16"
+    //           fill="#623381"
+    //           class="bi bi-heart"
+    //           viewBox="0 0 16 16">
+    //           <path
+    //             d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+    //           />
+    //         </svg>
+    //       </a>
+    //       <a href= "p2.html">
+    //       <img
+    //         src=${item.image}
+    //         alt="item-image">
+    //       </a>
+          
+    //       <div class="s_item_data">
+    //         <h4>${item.name}</h4>
+    //         <p>${item.description}</p>
+    //       </div>
+    //       <div class="price-cont">
+    //         <p class="special-offer">SAVE 60%</p>
+    //         <h2> RS. ${item.price} </h2>
+    //         <p>RRP Rs.7,607.50</p>
+    //       </div>
+    //       <div class="s_btn">
+    //         <button onclick="addToCart('${item.name}', '${item.image}', '${item.price}', '${item.description}')">Add to bag</button>
+    //         <h5>Extra 10% Off</h5>
+    //       </div>
+    //     </div>`;
+
+    //     const specialItem = document.getElementsByClassName('special-item')[0];
+    //     specialItem.insertAdjacentHTML('beforeend', html);
+
+    // })
+
+    // function addToCart(name, image, price, description) {
+
+    //     const itemData = { name, image, price, description };
+
+    //     // fetch local storage data 
+    //     let cartData = localStorage.getItem("items");
+
+    //     if (cartData) {
+    //         cartData = JSON.parse(cartData);
+    //     } else {
+    //         cartData = [];
+    //     }
+
+
+
+    //     // push the itemData object in parsedData
+    //     cartData.push(itemData);
+
+
+    //     const itemData_json = JSON.stringify(cartData);
+    //     localStorage.setItem("items", itemData_json)
+    //     // console.log(itemData)
+    // }
+
+
+    // const data_json = JSON.stringify(data);
+    // localStorage.setItem("data", data_json);
+
+    // function wishlist(name, image, price, description) {
+
+
+
+    //     const wishlist_item = { name, image, price, description };
+
+    //     // fetch local storage data 
+    //     let wishlistData = localStorage.getItem("wish");
+
+    //     if (wishlistData) {
+    //         wishlistData = JSON.parse(wishlistData);
+    //     } else {
+    //         wishlistData = [];
+    //     }
+
+
+
+    //     // push the itemData object in parsedData
+    //     wishlistData.push(wishlist_item);
+
+
+    //     const wishlistData_json = JSON.stringify(wishlistData);
+    //     localStorage.setItem("wish", wishlistData_json)
+    // }
+
+    // //...............................................................//
+    var counter = 1;
+    setInterval(function () {
+        document.getElementById("radio" + counter).checked = true;
+        counter++;
+        if (counter > 13) {
+            counter = 1;
+        }
+    }, 4000);
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    var register = document.getElementById("register");
+    var login = document.getElementById("login");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function () {
+        modal.style.display = "block";
+    };
+
+    // When the user clicks on <span> (x), close the modal
+    function closeModal() {
+        modal.style.display = "none";
+    }
+
+    span.onclick = function () {
+        closeModal();
+    };
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+    var signup = document.getElementById("sign");
+    var newhere = document.getElementById("new");
+
+    // function signIn() {
+    //     // console.log("signup")
+    //     register.style.display = "none";
+    //     login.style.display = "";
+    // }
+    // function signUp() {
+    //     // console.log("newhere")
+    //     login.style.display = "none";
+    //     register.style.display = "";
+    // }
+
+    // save_value.onclick = function (e) {
+    //     // console.log("res")
+    //     let user = {
+    //         take_first: document.getElementById("take_first").value,
+    //         take_last: document.getElementById("take_last").value,
+    //         take_email: document.getElementById("take_email").value,
+    //         take_password: document.getElementById("take_password").value,
+    //         take_password1: document.getElementById("take_password1").value,
+    //     };
+    //     localStorage.setItem("users", JSON.stringify(user));
+    //     // console.log(localStorage.getItem("users"))
+    //     e.preventDefault();
+    // };
+
+    // console.log(data.take_email)
+
+    // logIn.onclick = function () {
+    //     var data = JSON.parse(localStorage.getItem("users"));
+
+    //     var sign = document.getElementById("email").value;
+    //     var pwd = document.getElementById("pwd").value;
+
+    //     // console.log(data.take_first);
+    //     // console.log(data.take_email, sign);
+
+    //     // console.log(data.take_password, pwd);
+    //     var flag = false;
+    //     if (sign == data?.take_email && pwd == data?.take_password) {
+    //         flag = true;
+    //         // console.log(username);
+    //         closeModal();
+    //     } else {
+    //         // console.log("no")
+    //         alert("Email or Password wrong");
+    //     }
+    //     if (flag) {
+    //         let username = document.getElementById("myBtn");
+    //         username.innerHTML = data?.take_first;
+    //     }
+    // };
+    // function cart() {
+    //     console.log("yes");
+    // }
+</script>
