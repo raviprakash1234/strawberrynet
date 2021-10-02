@@ -7,17 +7,18 @@ const connect = require("./configs/db")
 
 
 const userController = require("./controllers/user.controller")
-const productController = require("./controllers/product.controller")
+const wishlistController = require("./controllers/wishlist.controller")
 const brandController = require("./controllers/brand.controller")
 
 const app = express()
 
 app.use(express.json())
 
-
+app.set("view engine", "ejs")
+app.use(express.static('public'))
 
 app.use("/user",userController)
-app.use("/product",productController)
+app.use("/all_wishlist",wishlistController)
 app.use("/brand",brandController)
 
 
