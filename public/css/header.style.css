@@ -37,7 +37,7 @@ body {
     width: 50%;
     height: 30%;
     margin-top: 25px;
-    /* border-radius: 12px; */
+    border-radius: 5px;
 }
 
 #search-cont > button {
