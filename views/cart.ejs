@@ -8,8 +8,9 @@
     <title>
         Beauty Brands, Skincare, Makeup & Perfume | Strawberrynet INEN
     </title>
-    <link rel="stylesheet" href="./css/header.style.css">
-    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="header.style.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
     <div id="header-cont">
         <div id="top-cont">
             <div id="strawberry-cont">
-                <a href="home1.html"><img src="https://a.cdnsbn.com/images/common/2016CompanyLogo.png"
+                <a href="/products"><img src="https://a.cdnsbn.com/images/common/2016CompanyLogo.png"
                         id="logo_img" /></a>
             </div>
             <div id="search-cont">
@@ -65,11 +66,9 @@
             </div>
         </div>
     </div>
-
     <!-- .......................menu cont ends........................... -->
     <div id="shp">
         <h1>SHOPPING BAG</h1>
-
         <div id="grid">
             <div id="template">
                 <h3 style="margin-left: 3%">DELIVER TO: <a href="#">India</a></h3>
@@ -77,7 +76,7 @@
             <div class="m">
                 <p style="margin-left: 3%">
                     Spend INR4,433.70 more for a reduced standard shipping fee at
-                    INR384.20.​
+                    INR384.20.
                 </p>
                 <div style="margin-left: 3%" id="shipingbar">
                     <div></div>
@@ -89,7 +88,6 @@
                 <p style="margin-left: 3%">Goods shipped from Strawberrynet</p>
                 <hr />
                 <div id="data">
-                    
                     <div id="products">
                         <p style="margin-left: 3%">
                             Item Total: 1 item(s)‎:
@@ -103,27 +101,16 @@
                             Freight Surcharge
                             <span id="surcharge"></span>
                         </p>
-
                         <hr />
                         <h3 style="margin-left: 3%">
                             Order Total:
                             <span id="order_total"></span>
                         </h3>
-                       <% cart.forEach(function (cart) { %>
-                            <div>
-                                <img src=<%= cart.product_img %>></img>
-                                <p><%= cart.product_name %></p>
-                                <p><%= cart.product_desc %></p>
-                                <p>Rs. <%= cart.product_price %></p>
-                            </div>
-                        <% }) %>
+                        <div id="test"></div>
                     </div>
                     <hr />
                 </div>
-
             </div>
-
-
             <div id="notification">
                 <ul>
                     <h4>NOTIFICATION</h4>
@@ -151,91 +138,71 @@
                     Checkout as
                     <span id="username1"></span>
                 </h2>
-
-                <a id="anker" href="checkout.html">CHECKOUT</a>
+                <a id="anker" href="/checkout">CHECKOUT</a>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
+<script>
+    let cart_data = JSON.parse(localStorage.getItem("items"));
+    let products_div = document.getElementById("test");
+    var total = 0;
+    cart_data.forEach(function (p) {
 
-<!-- <script type="text/javascript" src="../strawberrynet/script/cart.js"> -->
-    <!-- // let cart_data = JSON.parse(localStorage.getItem("items"));
-
-    // let products_div = document.getElementById("products");
-
-    // var total = 0;
-
-    // cart_data.forEach(function (p) {
-    //     let div = document.createElement("div");
-
-    //     let p_name = document.createElement("p");
-    //     p_name.innerHTML = p.name;
-
-    //     let p_description = document.createElement("p");
-    //     p_description.innerHTML = p.description;
-
-    //     let p_price = document.createElement("p");
-    //     p_price.innerHTML = "Rs." + p.price;
-
-    //     let p_image = document.createElement("img");
-    //     p_image.src = p.image;
-
-    //     let remove_item = document.createElement("button");
-    //     remove_item.textContent = "Delete";
-    //     remove_item.onclick = function () {
-    //         deleteFromCart(p);
-    //     };
-
-        // div.append(p_image, p_name, p_description, p_price, remove_item);
-
-        // products_div.append(div);
-
-        // total = parseFloat(total) + parseFloat(p.price.replace(/,/g, ""));
-    //});
+        let div = document.createElement("div");
+        let p_name = document.createElement("p");
+        p_name.innerHTML = p.name;
+        let p_description = document.createElement("p");
+        p_description.innerHTML = p.description;
+        let p_price = document.createElement("p");
+        p_price.innerHTML = "Rs." + p.price;
+        let p_image = document.createElement("img");
+        p_image.src = p.image;
+        let remove_item = document.createElement("button");
+        remove_item.textContent = "Delete";
+        remove_item.onclick = function () {
+            deleteFromCart(p);
+        };
+        div.append(p_image, p_name, p_description, p_price, remove_item);
+        products_div.append(div);
+        //total = parseFloat(total) + parseFloat(p.price.replace(/,/g, ""));
+    });
     // let totalprice_json = JSON.stringify(total);
     // localStorage.setItem("total_price", totalprice_json);
-
-    // function deleteFromCart(p) {
-    //     // console.log(p);
-
-    //     const cartData = JSON.parse(localStorage.getItem("items"));
-
-    //     const newData = deleteFn(cartData, p);
-
-    //     localStorage.setItem("items", JSON.stringify(newData));
-
-    //     window.location.reload();
-    // }
-    // function deleteFn(cartData, p) {
-    //     for (let i = 0; i < cartData.length; i++) {
-    //         // item to delete
-    //         const productName = p.name;
-
-    //         if (cartData[i].name == productName) {
-    //             cartData.splice(i, 1);
-    //         }
-    //     }
-
-    //     return cartData;
-    // }
-
-    // let total_p = document.getElementById("total");
-    // total_p.innerHTML = `Rs ${total}`;
-
-    // let standard_p = document.getElementById("signature");
-    // standard_p.innerHTML = `Rs ${0}`;
-
-    // let surcharge_p = document.getElementById("surcharge");
-    // surcharge_p.innerHTML = `Rs ${0}`;
-
-    // let order_total = document.getElementById("order_total");
-    // order_total.innerHTML = `Rs ${total + 0 + 0}`;
-
-    // let username_data = JSON.parse(localStorage.getItem("users"));
-    // console.log(username_data.take_first);
-
-    // let username1 = document.getElementById("username1");
-    // username1.innerHTML = username_data.take_first + "?"; -->
-<!-- </script> -->
+    function deleteFromCart(p) {
+        // console.log(p);
+        const cartData = JSON.parse(localStorage.getItem("items"));
+        const newData = deleteFn(cartData, p);
+        localStorage.setItem("items", JSON.stringify(newData));
+        window.location.reload();
+    }
+    function deleteFn(cartData, p) {
+        for (let i = 0; i < cartData.length; i++) {
+            // item to delete
+            const productName = p.name;
+            if (cartData[i].name == productName) {
+                cartData.splice(i, 1);
+            }
+        }
+        return cartData;
+    }
+    var sum = 0
+    for (let i = 0; i < cart_data.length; i++) {
+        sum += cart_data[i].price
+    }
+    let total_p = document.getElementById("total");
+    total_p.innerHTML = `Rs ${sum}`;
+    let standard_p = document.getElementById("signature");
+    standard_p.innerHTML = `Rs ${0}`;
+    let surcharge_p = document.getElementById("surcharge");
+    surcharge_p.innerHTML = `Rs ${0}`;
+    let order_total = document.getElementById("order_total");
+    order_total.innerHTML = ` ${sum + 0 + 0}`;
+    let username_data = JSON.parse(localStorage.getItem("users"));
+    console.log(username_data.take_first);
+    let username1 = document.getElementById("username1");
+    username1.innerHTML = username_data.take_first + "?";
+</script>
