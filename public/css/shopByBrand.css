@@ -28,21 +28,8 @@
 }
 
 .t-data {
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 84%;
     letter-spacing: 0.05em;
-}
-
-.t-data td {
-    width: 200px;
-    height: 20px;
-    color: #623381;
-}
-
-.t-data th {
-    color: #623381;
-    text-align: left;
-    font-size: 35px;
 }
 
 .t-data a {
