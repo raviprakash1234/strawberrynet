@@ -3,8 +3,9 @@ body {
     margin-bottom: 200px;
 }
 #shp {
-  width: 90%;
+  width: 77%;
   margin: auto;
+  /* margin: auto; */
   font-family: Lato, sans-serif;
 }
 h1 {
@@ -40,7 +41,7 @@ h1 {
 #grid>div:nth-child(3) {
   grid-area: bottom;
   width: 85%;
-  height: 80%;
+  height: 150px;
   background-color: #e7e7e7;
   overflow-y: scroll;
   color: #4f4f4f;

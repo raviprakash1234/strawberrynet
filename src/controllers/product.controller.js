@@ -34,4 +34,29 @@ router.patch("/:id", async (req, res) => {
     return res.status(200).send({product});
 })
 
+router.get("/category/:id", async (req, res) => {
+    const prod = await Product.find({ category: req.params.id }).populate("brand").populate("category").populate("sizes").lean().exec();
+   
+    res.render("products/makeUp.ejs", {
+        prod: prod
+    })
+})
+
+router.get("/:id", async (req, res) => {
+    const product = await Product.findById(req.params.id).populate("brand").populate("category").populate("sizes").lean().exec()
+
+    res.render("products/p2.ejs", {
+        product: product
+    })
+})
+
+// router.get("", async (req, res) => {
+
+//     res.render("addToCart.ejs")
+// })
+
+
+
+
+
 module.exports = router

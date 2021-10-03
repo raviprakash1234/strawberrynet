@@ -1,10 +1,7 @@
 
-
-
-
 /* ......................slider style starts....................... */
 #slide-cont {
-    margin: 0;
+    margin-top: 0;
     padding: 0;
     height: 48vh;
     align-items: center;
@@ -185,100 +182,5 @@
   #radio13:checked ~ .navigation-auto .auto-btn13 {
     background: purple;
   }
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-  }
-
-  /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: fit-content;
-  }
-
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .rectangle {
-    width: 350px;
-    height: 600px;
-    border: 2px solid red;
-    margin: auto;
-    background-color: whitesmoke;
-  }
-  .button {
-    text-align: center;
-    margin-top: 5px;
-  }
-  .button > button {
-    width: 100px;
-    height: 30px;
-    border: 1px solid blue;
-  }
-  .input > input {
-    width: 300px;
-    height: 30px;
-    margin-top: 10px;
-    margin-left: 20px;
-    border: 1px solid #633a81;
-  }
-  .input > p {
-    font-size: 16px;
-    margin-left: 20px;
-  }
-  .checkbox > input {
-    margin-left: 20px;
-    width: 30px;
-    height: 20px;
-  }
-  .checkbox > label {
-    margin-left: 5px;
-    font-size: 16px;
-  }
-  .submit > button {
-    margin-top: 30%;
-    margin-bottom: 5px;
-    margin-left: 16%;
-    width: 230px;
-    height: 40px;
-    border: none;
-    background-color: #633a81;
-    color: white;
-    font-size: 30px;
-  }
-  .submit > button:hover {
-    cursor: pointer;
-    color: black;
-    background-color: blanchedalmond;
-    border: 1px solid gray;
-  }
-  .forget {
-    margin-top: 10px;
-    margin-left: 20px;
-  }
   
-
   /* ...................slider style ends...................... */

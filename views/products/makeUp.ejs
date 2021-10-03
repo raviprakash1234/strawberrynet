@@ -1,0 +1,181 @@
+<%- include("../partials/header.ejs") %>
+<link rel="stylesheet" href="/css/makeUp.css">
+
+  <body>
+    <%- include("../partials/navbar.ejs") %>
+      <div id="template">
+        <div id="top">
+          <div class="banner">
+            <img src="https://a.cdnsbn.com/images/English/detail_SaleFiesta8offAug21_1170_1.jpg" alt="banner-img">
+          </div>
+          <div><a href="#">
+              <%=prod[0].category.category_name %>
+            </a>
+            <h1>
+              <%=prod[0].category.category_name %>
+            </h1>
+          </div>
+        </div>
+        <div id="left">
+          <div>
+            <h3>
+              <%=prod[0].category.category_name %>
+            </h3>
+            <table class="t1">
+              <tr>
+                <td>Eyes(1902)</td>
+              </tr>
+              <tr>
+                <td>Face(4573)(1902)</td>
+              </tr>
+              <tr>
+                <td>Lips(4339)</td>
+              </tr>
+              <tr>
+                <td>Makeup Sets(403)</td>
+              </tr>
+              <tr>
+                <td>Tools & Accessories(488)</td>
+              </tr>
+            </table>
+          </div>
+
+          <hr />
+
+          <div id="l2">
+            <h3>Refine by Brands</h3>
+            <table class="t1">
+              <tr>
+                <td><input type="checkbox">ADDICTION</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">Annemarie Borlind</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">Becca</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">Bellapierre Cosmetics</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">Bobbi Brown</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">Burberry</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">Cargo</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">Christian Dior</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">Dejavu</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">Filorga</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">Gucci</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">Image</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">L'Oreal</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">Maybelline</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">NYX</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">Sisley</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">Urban Decay</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox">Vincent Longo</td>
+              </tr>
+            </table>
+
+          </div>
+
+          <hr />
+
+
+        </div>
+        <div id="right">
+          <div class="rd1">
+            <table>
+              <tr>
+                <th colspan="4">TOP <%=prod[0].category.category_name %> BRANDS</th>
+              </tr>
+              <tr>
+                <td><a href="#">BAREMINERALS</a></td>
+                <td><a href="#">CHRISTIAN DIOR</a></td>
+                <td><a href="#">CLINIQUE</a></td>
+                <td><a href="#">ESTEE LAUDER</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">GIORGIO ARMANI</a></td>
+                <td><a href="#">GIVENCHY</a></td>
+                <td><a href="#">GUERLAIN</a></td>
+                <td><a href="#">JANE IREDALE</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">LANCOME</a></td>
+                <td><a href="#">LAURA MERCIER</a></td>
+                <td><a href="#">NARS</a></td>
+                <td><a href="#">YVES SAINT LAURENT</a></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="all-b"><a href="brands">View All Makeup Brands ></a></td>
+              </tr>
+            </table>
+            <div class="rline"></div>
+          </div>
+          <div class="rd2">
+
+            <table>
+              <tr>
+                <th colspan="4">
+                  <%=prod[0].category.category_name %>
+                </th>
+              </tr>
+              <% prod.forEach(function(prod) { %>
+                <tr>
+                  <td class="info"><a href="#">
+                      <%=prod.brand_name %> <br>
+                        <%=prod.product_name %> <br>
+                          6ml/0.2oz
+                    </a></td>
+                  <td class="pic"><img src="<%=prod.product_image %>" alt="p-img">
+                    <p>Click >></p><a href="#">Best Deals</a>
+                  </td>
+                  <td class="pr">
+                    <h2>
+                      <%=prod.price %>
+                    </h2>
+                    <h5>Extra 8% Off</h5>
+                  </td>
+                  <td class="v"><a href="#">view</a></td>
+                </tr>
+                <% }) %>
+            </table>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ......................footer start.................... -->
+      <%- include("../partials/footer.ejs") %>
+        <!-- ....................footer Ends..................... -->
+
+</html>
+<script type="text/javascript" src="js/users.js"></script>

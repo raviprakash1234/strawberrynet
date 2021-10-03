@@ -1,317 +1,194 @@
 body {
-    background-color: rgb(223, 222, 222);
-  }
-
-  #grid {
-    display: grid;
-    gap: 1%;
-    grid-template: 'top1 top2'
+  background-color: rgb(223, 222, 222);
+}
+#grid {
+  display: grid;
+  gap: 1%;
+  grid-template: 'top1 top2'
       'top1 right'
       'left1 right'
       'left2 right'
       'left3 right';
+}
+/* div>div{
+ border: 1px solid red;
+} */
+#grid>div:nth-child(1) {
+  grid-area: top1;
+  /* height: 450px; */
+  width: 700px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+#grid>div:nth-child(2) {
+  grid-area: left1;
+  /* height: 800px; */
+  width: 700px;
+  background-color: white;
+}
+#grid>div:nth-child(3) {
+  grid-area: left2;
+  height: 200px;
+  width: 700px;
+  background-color: white;
+}
+#payment_page {
+  grid-area: left3;
+  height: 100%;
+  width: 700px;
+  background-color: white;
+}
+#grid>div:nth-child(5) {
+  grid-area: top2;
+  height: 240px;
+  width: 400px;
+  background-color: white;
+}
+#grid>div:nth-child(6) {
+  grid-area: right;
+  height: 230px;
+  width: 400px;
+  background-color: white;
+}
+#image {
+  float: left;
+}
+#name {
+  float: left;
+}
+#qty {
+  float: left;
+  margin-left: 200px;
+}
+#price {
+  float: left;
+  margin-left: 200px;
+}
+.clear {
+  clear: both;
+}
+.rs {
+  float: left;
+  margin-left: 400px;
+}
+.total {
+  float: left;
+}
+.input_btn {
+  width: 650px;
+  height: 30px;
+  margin: 10px;
+}
+select {
+  width: 655px;
+  height: 30px;
+  margin: 10px;
+}
+#btn {
+  width: 400px;
+  height: 40px;
+  margin-left: 150px;
+  font-size: 30px;
+  background-color: purple;
+  color: white;
+}
+#text {
+  width: 300px;
+  height: 30px;
+  margin-left: 40px;
+  font-size: 20px;
+}
+#apply {
+  font-size: 20px;
+  color: black;
+  text-align: center;
+}
+.adjust_anker {
+  margin-left: 300px;
+}
+.payment {
+  font-size: 20px;
+  display: flex;
+  /* margin-top: 10px; */
+}
+#payment_btn {
+  margin-left: 100px;
+  width: 500px;
+  height: 40px;
+  margin-top: 40px;
+  background-color: purple;
+  color: white;
+  font-size: 20px;
+}
+#promo {
+  width: 370px;
+  font-size: 15px;
+}
+#promo {
+  width: 200px;
+  height: 40px;
+  margin-left: 100px;
+  margin-top: 10px;
+  background-color: purple;
+  font-size: 20px;
+  color: white;
+}
+.random_text {
+  text-align: center;
+}
+.round_btn {
+  /* width: 5px; */
+  height: 15px;
+  border-radius: 5px;
+}
+.pay_input {
+  width: 500px;
+  height: 30px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+}
+.pay_input_mmyy {
+  width: 250px;
+  height: 30px;
+  margin-left: 40px;
+}
+.pay_input_code {
+  width: 240px;
+  height: 30px;
+}
+.form-popup {
+  display: none
+}
+#visa {
+  float: left;
+}
+#products>div {
+  border: 1px solid rgb(63, 63, 60);
+  border-radius: 5px;
+  display: grid;
+  width: 100%;
+  margin-top: 5px;
+}
+#products>div>p {
+  color: black;
+  margin-left: 10px;
+  font-size: 15px;
+  line-height: 0.03em;
+}
+#products img{
+  width: 13%;
+}
+#f_right>span {
+  color: brown;
+}
+#header-cont {
+  font-family: Lato, sans-serif;
+  height: 100%;
+  width: 100%;
+}
 
-  }
-  #grid>div:nth-child(1) {
-    grid-area: top1;
-    width: 700px;
-    background-color: white;
-    margin-bottom: 10px;
-  }
-
-  #grid>div:nth-child(2) {
-    grid-area: left1;
-    width: 700px;
-    background-color: white;
-
-  }
-
-  #grid>div:nth-child(3) {
-    grid-area: left2;
-    height: 200px;
-    width: 700px;
-    background-color: white;
-  }
-
-  #payment_page {
-    grid-area: left3;
-    height: 100%;
-    width: 700px;
-    background-color: white;
-  }
-
-  #grid>div:nth-child(5) {
-    grid-area: top2;
-    height: 240px;
-    width: 400px;
-    background-color: white;
-  }
-
-  #grid>div:nth-child(6) {
-    grid-area: right;
-    height: 230px;
-    width: 400px;
-    background-color: white;
-  }
-
-  #image {
-    float: left;
-  }
-
-  #name {
-    float: left;
-  }
-
-  #qty {
-    float: left;
-    margin-left: 200px;
-  }
-
-  #price {
-    float: left;
-    margin-left: 200px;
-  }
-
-  .clear {
-    clear: both;
-  }
-
-  .rs {
-    float: left;
-    margin-left: 400px;
-  }
-
-  .total {
-    float: left;
-  }
-
-  .input_btn {
-    width: 650px;
-    height: 30px;
-    margin: 10px;
-  }
-
-  select {
-    width: 655px;
-    height: 30px;
-    margin: 10px;
-  }
-
-  #btn {
-    width: 400px;
-    height: 40px;
-    margin-left: 150px;
-    font-size: 30px;
-    background-color: purple;
-    color: white;
-
-  }
-
-  #text {
-    width: 300px;
-    height: 30px;
-    margin-left: 40px;
-    font-size: 20px;
-
-  }
-
-  #apply {
-    font-size: 20px;
-    color: black;
-    text-align: center;
-  }
-
-  .adjust_anker {
-    margin-left: 300px;
-  }
-
-  .payment {
-    font-size: 20px;
-    display: flex;
-    /* margin-top: 10px; */
-  }
-
-  #payment_btn {
-    margin-left: 100px;
-    width: 500px;
-    height: 40px;
-    margin-top: 40px;
-    background-color: purple;
-    color: white;
-    font-size: 20px;
-  }
-
-  #promo {
-    width: 370px;
-    font-size: 15px;
-
-  }
-
-  #promo {
-    width: 200px;
-    height: 40px;
-    margin-left: 100px;
-    margin-top: 10px;
-    background-color: purple;
-    font-size: 20px;
-    color: white;
-  }
-
-  .random_text {
-    text-align: center;
-  }
-
-  .round_btn {
-    /* width: 5px; */
-    height: 15px;
-    border-radius: 5px;
-
-  }
-
-  .pay_input {
-    width: 500px;
-    height: 30px;
-    margin-bottom: 10px;
-    margin-left: 40px;
-  }
-
-  .pay_input_mmyy {
-    width: 250px;
-    height: 30px;
-    margin-left: 40px;
-  }
-
-  .pay_input_code {
-    width: 240px;
-    height: 30px;
-  }
-
-  .form-popup {
-    display: none
-  }
-
-  #visa {
-    float: left;
-  }
-
-  #products>div {
-    border: 1px solid rgb(63, 63, 60);
-    border-radius: 5px;
-    display: grid;
-    width: 100%;
-    margin-top: 5px;
-  }
-
-  #products>div>p {
-    color: black;
-    margin-left: 10px;
-    font-size: 15px;
-    line-height: 0.03em;
-  }
-
-  img {
-    width: 13%;
-  }
-
-  #f_right>span {
-    color: brown;
-  }
-
-  #header-cont {
-    font-family: Lato, sans-serif;
-    height: 100%;
-    width: 100%;
-  }
-
-  #top-cont {
-    width: 100%;
-    height: 100px;
-    display: flex;
-    background: url("https://a.cdnsbn.com/images/common/2016headerbg.jpg?v=2") top center no-repeat;
-  }
-
-  #strawberry-cont {
-    float: left;
-    width: 18%;
-    padding: 20px 20px 20px 20px;
-    padding-left: 50px;
-    margin-left: 16%;
-  }
-
-  #logo_img {
-    width: 80%;
-    /* height: 80%; */
-  }
-
-  #search-cont {
-    text-align: center;
-    width: 40%;
-  }
-
-  #search-cont>input {
-    border: 2px solid purple;
-    width: 50%;
-    height: 30%;
-    margin-top: 25px;
-    border-radius: 12px;
-  }
-
-  #search-cont>button {
-    border: 2px solid purple;
-    height: 36%;
-    border-radius: 12px;
-    color: #623381;
-  }
-
-  #right-cont {
-    display: flex;
-    flex-direction: row-reverse;
-    width: 15%;
-  }
-
-  #right-cont>a {
-    margin-right: 40px;
-    margin-top: 8%;
-    color: #b53788;
-    font-size: 12px;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  #right-cont svg {
-    padding: 4px;
-  }
-
-  .special-item .cut {
-    text-decoration: line-through;
-  }
-
-  .menu-cont {
-    background-color: #623381;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .button>a {
-    color: white;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    font-size: 12px;
-    font-weight: bold;
-    text-decoration: none;
-    letter-spacing: 0.03em;
-  }
-
-  .btn-hover>a:hover {
-    background-color: white;
-    color: #623381;
-    text-decoration: underline;
-  }
-
-  #shp {
-    width: 90%;
-    margin-left: 12%;
-    font-family: Lato, sans-serif;
-  }
+#shp {
+  width: 77%;
+  margin: auto;
+  font-family: Lato, sans-serif;
+}

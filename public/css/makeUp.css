@@ -25,10 +25,10 @@
 }
 
 #template {
+    width: 77%;
     display: grid;
     gap: 20px;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin: auto;
     margin-top: 2%;
 }
 
@@ -53,6 +53,10 @@
 #left {
     grid-area: lbox;
 }
+#left hr{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
 
 .t1 {
     margin-left: 20px;
@@ -60,7 +64,7 @@
 
 #l2 {
     overflow-y: scroll;
-    height: 200px;
+    height: 250px;
 }
 
 #left h3 {

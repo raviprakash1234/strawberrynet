@@ -12,6 +12,7 @@ router.post("", async (req, res) => {
     return res.status(201).send({category});
 })
 
+
 // get:- get all the categorys details
 router.get("", async (req, res) => {
     const category = await Category.find().lean().exec();

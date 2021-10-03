@@ -1,0 +1,109 @@
+<!-- ..........................header cont start........................... -->
+<div id="header-cont" class="navbar">
+    <div id="top-cont">
+        <div id="strawberry-cont">
+            <a href="/products"><img src="https://a.cdnsbn.com/images/common/2016CompanyLogo.png" /></a>
+        </div>
+        <div id="search-cont">
+            <input type="text" placeholder="SEARCH BRAND/PRODUCTS" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        <div id="right-cont">
+            <a href="/cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-bag-fill" viewBox="0 0 18 18">
+                    <path
+                        d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z" />
+                </svg>Bag</a>
+            <a href="../../wishlist.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-heart-fill" viewBox="0 0 18 18">
+                    <path fill-rule="evenodd"
+                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                </svg>Wishlist</a>
+            <a href="#" id="myBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-person-circle" viewBox="0 0 18 18">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path fill-rule="evenodd"
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                </svg>Login</a>
+        </div>
+    </div>
+    <!-- ...........................header cont ends............................ -->
+    <!-- ...........................menu cont starts............................ -->
+    <div class="menu-cont">
+        <div class="button btn-hover">
+            <a href="/brands" title="SHOP BY BRAND">SHOP BY BRAND</a>
+            <a href="/products/category/6153f21828b27edf09332490" title="SKINCARE">SKINCARE</a>
+            <a href="/products/category/6153f22c28b27edf09332492" title="MAKEUP">MAKEUP</a>
+            <a href="/products/category/6153f23428b27edf09332494" title="HAIRCARE">HAIRCARE</a>
+            <a href="/products/category/6153f24228b27edf09332496" title="PERFUME">PERFUME</a>
+            <a href="/products/category/6153f25928b27edf09332498" title="MEN'S SKINCARE">MEN'S SKINCARE</a>
+            <a href="/products/category/6153f26c28b27edf0933249a" title="MEN'S COLOGNE">MEN'S COLOGNE</a>
+            <a href="/products/category/6153f28328b27edf0933249c" title="HOME SCENTS">HOME SCENTS</a>
+            <a href="/products/category/6153f29828b27edf0933249e" title="NATURAL BEAUTY">NATURAL BEAUTY</a>
+            <a href="/products/category/6153f2a828b27edf093324a0" title="SPECIAL">SPECIAL</a>
+            <a href="/products/category/6153f2b028b27edf093324a2" title="★NEW">★NEW</a>
+        </div>
+    </div>
+</div>
+<!-- .......................menu cont ends........................... -->
+<!-- ..........................SignUp/Login.......................... -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="register">
+            <div class="rectangle">
+                <div class="button">
+                    <button id="sign" onclick="signIn()">Sign In</button>
+                    <button id="new" onclick="signUp()">New Here?</button>
+                </div>
+                <hr />
+                <div class="input">
+                    <input type="text" placeholder="FirstName" id="take_first" /><br />
+                    <input type="text" placeholder="LastName" id="take_last" /><br />
+                    <input type="text" placeholder="Email address" id="take_email" /><br />
+                    <input type="password" placeholder="Password" id="take_password" /><br />
+                    <p>
+                        Please enter a minimum of 8 characters,including at least 1
+                        letter and 1 number
+                    </p>
+                    <input type="password" placeholder="Re-enter your Password" id="take_password1" />
+                    <p>
+                        By creating your account,you agree to our privacy & Terms &
+                        conditions
+                    </p>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="checkbox1" name="checkbox" value="checkbox" />
+                    <label for="checkbox1">Subscribe to our exclusive email offers</label>
+                </div>
+                <div class="submit">
+                    <button id="save_value">REGISTER</button>
+                </div>
+            </div>
+        </div>
+        <div id="login" style="display: none">
+            <div class="rectangle">
+                <div class="button">
+                    <div class="button">
+                        <button id="sign" onclick="signIn()">Sign In</button>
+                        <button id="new" onclick="signUp()">New Here?</button>
+                    </div>
+                </div>
+                <hr />
+                <div class="input">
+                    <input type="text" placeholder="Email address" id="email" /><br />
+                    <input type="text" placeholder="Password" id="pwd" /><br />
+                </div>
+                <div class="forget">
+                    <a href="#">Forget Password</a>
+                </div>
+                <div class="submit">
+                    <button id="logIn">SIGN IN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
