@@ -1,0 +1,58 @@
+<%- include("../partials/header.ejs") %>
+    <link rel="stylesheet" href="css/shopByBrand.css">
+
+    <body>
+        <%- include("../partials/navbar.ejs") %>
+            <div class="main-cont">
+                <!-- .......................Discount banner start........................... -->
+                <div class="banner">
+                    <img src="https://a.cdnsbn.com/images/English/detail_SaleFiesta8offAug21_1170_1.jpg"
+                        alt="banner-img">
+                </div>
+                <!-- .......................Discount banner ends........................... -->
+                <!-- ......................Brands-button Cont start................. -->
+                <div class="brands">
+                    <h1>ALL BRANDS</h1>
+                    <div class="b-cat">
+                        <button>ALL BRANDS</button>
+                        <button>SKINCARE BRANDS</button>
+                        <button>MAKEUP BRANDS</button>
+                        <button>HAIRCARE BRANDS</button>
+                        <button>WOMEN'S PERFUME BRANDS</button>
+                        <button>MEN'S SKINCARE BRANDS</button>
+                        <button>MEN'S COLOGNE BRANDS</button>
+                        <button>HOME SCENTS BRANDS</button>
+                    </div>
+                </div>
+                <!-- ................Brands-button Cont ends................. -->
+                <div class="line"></div>
+                <div class="t-data">
+                    <div>
+                        <%for(let i=65; i <=90; i++){%>
+                            <div>
+                                <h1 style=" color:#5c2f76;">
+                                    <%=String.fromCharCode(i)%>
+                                </h1>
+                                <div
+                                    style="display:grid; grid-template-columns:  25% 25% 25% 25% 25%; line-height: 36px;">
+                                    <% brands.forEach(function (brand){ if(brand.brand_name[0]==String.fromCharCode(i)){
+                                        %>
+
+                                        <a href="#">
+                                            <%=brand.brand_name %>(<%=Math.floor(Math.random() * 30)%>)
+                                        </a>
+                                        <% }})%>
+                                </div>
+                            </div>
+                            <%}%>
+                    </div>
+
+                </div>
+            </div>
+            <!-- ............................footer start........................ -->
+            <%- include("../partials/footer.ejs") %>
+                <!-- ........................footer Ends......................... -->
+
+                </html>
+
+                <script type="text/javascript" src="js/users.js"></script>
